@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriTalent - Catalogue Freelances</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <!--
+         barre de navigation
+    -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+           <!-- navbar : La base de Bootstrap pour créer une barre de navigation.navbar-expand-lg : C'est la classe magique pour le mobile. Elle cache les liens derrière un menu "hamburger" sur les petits écrans et les affiche normalement sur les grands écrans (ordinateurs).navbar-dark bg-dark : Donne un look sombre (fond noir et texte blanc). C'est très élégant et cohérent avec le reste de votre design pour AfriTalent.fixed-top : C'est une option cruciale. Elle bloque la barre en haut de l'écran. Même quand l'utilisateur descend dans la page (scroll), le menu reste visible pour lui permettre de naviguer facilement. -->
+            <div class="container">
+
+                <a class="navbar-brand fw-bold fs-4" href="index.html">
+                    <img src="images/logo.png" alt="logo AfriTalent" width="38" height="38" class="me-2">
+                    AfriTalent
+                </a>
+
+                <button
+                    class="navbar-toggler"
+
+
+
+
+
+                     
+                    type="button"
+                    data-bs-toggle="collapse"
+                  
+aria-controls="menu-nav"
+ aria-label="ouvrir le menu"
+                    aria-expanded="false"
+                    
+                   >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menu-nav">
+                    <ul class="navbar-nav ms-auto me-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="freelance.html">Freelances</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tarif.html">Tarifs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">À propos</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-info text-dark fw-bold">Rejoindre AfriTalent</a>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="mt-5 pt-4">
+
+
+        <!--
+             EN-TETE PAGE-->
+        <section aria-label="titre de la page freelances">
+            <div class="container py-4">
+                <h1 class="fw-bold">Nos freelances</h1>
+                <p class="text-muted lead">
+                    Trouvez le talent qu'il vous faut parmi nos profils vérifiés et notés par la communauté.
+                </p>
+            </div>
+        </section>
+
+ 
+        <!--
+             BARRE DE FILTREeeeeeeeeeeeeeeeeee-->
+        <section aria-label="filtrer par catégorie">
+            <div class="container pb-4">
+                <div class="d-flex flex-wrap gap-2">
+
+                    <button class="btn btn-info text-dark" type="button" data-categorie="tous">
+                        Tous
+                    </button>
+                    <button class="btn btn-outline-secondary" type="button" data-categorie="dev-web">
+                        Développement Web
+                    </button>
+                    <button class="btn btn-outline-secondary" type="button" data-categorie="design">
+                        Design UI/UX
+                    </button>
+                    <button class="btn btn-outline-secondary" type="button" data-categorie="marketing">
+                        Marketing Digital
+                    </button>
+                    <button class="btn btn-outline-secondary" type="button" data-categorie="data-ia">
+                        Data &amp; IA
+                    </button>
+                    <button class="btn btn-outline-secondary" type="button" data-categorie="redaction">
+                        Rédaction Tech
+                    </button>
+                    <button class="btn btn-outline-secondary" type="button" data-categorie="devops">
+                        DevOps &amp; Cloud
+                    </button>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!--
+             GRILLE FREELANCES
+           les  9 profils 
+        -->
+        <section aria-label="liste des freelances disponibles">
+            <div class="container py-4">
+                <div class="row g-4">
+
+
+                    <!-- Freelance 1 -->
+                    <div class="col-12 col-md-6 col-lg-4" data-categorie="dev-web">
+                        <div class="card h-100 bg-dark text-white border-0">
+                            <div class="card-body text-center p-4">
+                                <img src="images/freelance1.png" alt="photo de Ibou Sarr" class="rounded-circle mb-3" width="80" height="80">
+         <h2 class="card-title h5">Ibou Sarr</h2>
+                                <p class="text-info fw-semibold small">Développement Web</p>
+                <p class="card-text text-muted small">
+                                    Développeur full-stack Node.js et Vue.js, 4 ans d'expérience en startups sénégalaises.
+                                </p>
+                                <p class="fw-bold mb-2">28 000 XOF / heure</p>
+                 <div class="mb-3" aria-label="note 5 sur 5">
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+       <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                </div>
+                                <a href="#" class="btn btn-outline-info btn-sm">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Freelance 2 -->
+                    <div class="col-12 col-md-6 col-lg-4" data-categorie="design">
+                        <div class="card h-100 bg-dark text-white border-0">
+                            <div class="card-body text-center p-4">
+                                <img src="images/freelance2.png" alt="photo de Aïcha Mbaye" class="rounded-circle mb-3" width="80" height="80">
+                                <h2 class="card-title h5">Aïcha Mbaye</h2>
+                                <p class="text-info fw-semibold small">Design UI/UX</p>
+  <p class="card-text text-muted small">
+                                    Designer produit spécialisée Figma, créatrice d'interfaces pour applications mobiles africaines.
+                                </p>
+                                <p class="fw-bold mb-2">22 000 XOF / heure</p>
+                                <div class="mb-3" aria-label="note 5 sur 5">
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+             <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                </div>
+                                <a href="#" class="btn btn-outline-info btn-sm">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Freelance 3 -->
+                    <div class="col-12 col-md-6 col-lg-4" data-categorie="marketing">
+                        <div class="card h-100 bg-dark text-white border-0">
+                            <div class="card-body text-center p-4">
+              <img src="images/freelance3.png" alt="photo de Cheikh Gueye" class="rounded-circle mb-3" width="80" height="80">
+                                <h2 class="card-title h5">Cheikh Gueye</h2>
+                                <p class="text-info fw-semibold small">Marketing Digital</p>
+         <p class="card-text text-muted small">
+                                    Expert SEO et campagnes Meta Ads, spécialisé dans la croissance de startups africaines.
+                                </p>
+                                <p class="fw-bold mb-2">18 000 XOF / heure</p>
+                                <div class="mb-3" aria-label="note 4 sur 5">
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+         <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star text-warning" aria-hidden="true"></i>
+                                </div>
+                <a href="#" class="btn btn-outline-info btn-sm">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Freelance 4 -->
+                    <div class="col-12 col-md-6 col-lg-4" data-categorie="data-ia">
+                        <div class="card h-100 bg-dark text-white border-0">
+                            <div class="card-body text-center p-4">
+                                <img src="images/freelance4.png" alt="photo de Rokhaya Diallo" class="rounded-circle mb-3" width="80" height="80">
+        <h2 class="card-title h5">Rokhaya Diallo</h2>
+                                <p class="text-info fw-semibold small">Data &amp; IA</p>
+                                <p class="card-text text-muted small">
+                                    Data scientist Python et TensorFlow, spécialisée dans les modèles de prédiction pour le commerce africain.
+           </p>
+                                <p class="fw-bold mb-2">38 000 XOF / heure</p>
+                                <div class="mb-3" aria-label="note 5 sur 5">
+                <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+      <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                </div>
+                                <a href="#" class="btn btn-outline-info btn-sm">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Freelance 5 -->
+                    <div class="col-12 col-md-6 col-lg-4" data-categorie="redaction">
+                        <div class="card h-100 bg-dark text-white border-0">
+                <div class="card-body text-center p-4">
+                                <img src="images/freelance5.png" alt="photo de Omar Niang" class="rounded-circle mb-3" width="80" height="80">
+                                <h2 class="card-title h5">Omar Niang</h2>
+<p class="text-info fw-semibold small">Rédaction Tech</p>
+                                <p class="card-text text-muted small">
+                                    Rédacteur technique bilingue français-anglais, expert en documentation API et contenus SaaS.
+                </p>
+                                <p class="fw-bold mb-2">15 000 XOF / heure</p>
+                                <div class="mb-3" aria-label="note 4 sur 5">
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+  <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+         <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star text-warning" aria-hidden="true"></i>
+                                </div>
+                                <a href="#" class="btn btn-outline-info btn-sm">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Freelance 6 -->
+                    <div class="col-12 col-md-6 col-lg-4" data-categorie="devops">
+                        <div class="card h-100 bg-dark text-white border-0">
+                            <div class="card-body text-center p-4">
+                                <img src="images/freelance6.png" alt="photo de Moussa Kouyaté" class="rounded-circle mb-3" width="80" height="80">
+        <h2 class="card-title h5">Moussa Kouyaté</h2>
+                                <p class="text-info fw-semibold small">DevOps &amp; Cloud</p>
+                                <p class="card-text text-muted small">
+                                    Ingénieur DevOps certifié AWS et GCP, spécialisé en pipelines CI/CD et infrastructure as code.
+         </p>
+                                <p class="fw-bold mb-2">32 000 XOF / heure</p>
+                                <div class="mb-3" aria-label="note 5 sur 5">
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+<i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                </div>
+                                <a href="#" class="btn btn-outline-info btn-sm">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Freelance 7 -->
+                    <div class="col-12 col-md-6 col-lg-4" data-categorie="dev-web">
+                        <div class="card h-100 bg-dark text-white border-0">
+                            <div class="card-body text-center p-4">
+                                <img src="images/freelance7.png" alt="photo de Fatou Camara" class="rounded-circle mb-3" width="80" height="80">
+           <h2 class="card-title h5">Fatou Camara</h2>
+                                <p class="text-info fw-semibold small">Développement Web</p>
+                                <p class="card-text text-muted small">
+                                    Développeuse back-end Django et PostgreSQL, passionnée par la performance et la sécurité web.
+           </p>
+                                <p class="fw-bold mb-2">25 000 XOF / heure</p>
+                                <div class="mb-3" aria-label="note 5 sur 5">
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                </div>
+                                <a href="#" class="btn btn-outline-info btn-sm">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Freelance 8 -->
+                    <div class="col-12 col-md-6 col-lg-4" data-categorie="design">
+                        <div class="card h-100 bg-dark text-white border-0">
+                            <div class="card-body text-center p-4">
+                                <img src="images/freelance8.png" alt="photo de Yaya Touré" class="rounded-circle mb-3" width="80" height="80">
+                                <h2 class="card-title h5">Yaya Touré</h2>
+                                <p class="text-info fw-semibold small">Design UI/UX</p>
+                                <p class="card-text text-muted small">
+                       Motion designer et illustrateur numérique, créateur de brand identities pour entreprises ivoiriennes.
+                                </p>
+                                <p class="fw-bold mb-2">26 000 XOF / heure</p>
+                                <div class="mb-3" aria-label="note 4 sur 5">
+          <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star text-warning" aria-hidden="true"></i>
+                                </div>
+                                <a href="#" class="btn btn-outline-info btn-sm">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Freelance 9 -->
+                    <div class="col-12 col-md-6 col-lg-4" data-categorie="data-ia">
+                        <div class="card h-100 bg-dark text-white border-0">
+                            <div class="card-body text-center p-4">
+                  <img src="images/freelance9.png" alt="photo de Binta Sow" class="rounded-circle mb-3" width="80" height="80">
+                                <h2 class="card-title h5">Binta Sow</h2>
+          <p class="text-info fw-semibold small">Data &amp; IA</p>
+          <!-- &amp; est une entité HTML utilisée pour afficher le symbole de l'esperluette (&) sur une page web. -->
+                                <p class="card-text text-muted small">
+                Analyste BI et experte Power BI, spécialisée en tableaux de bord pour PME africaines.
+                                </p>
+              <p class="fw-bold mb-2">29 000 XOF / heure</p>
+                                <div class="mb-3" aria-label="note 5 sur 5">
+                                    <!-- class="mb-3" : (Margin Bottom 3) Ajoute un petit espace en bas (environ 16px) pour que la note ne colle pas au texte qui suit.aria-label="note 5 sur 5" : C'est la partie cruciale pour l'accessibilité. Si vous affichez 5 icônes d'étoiles, un malvoyant ne peut pas les "voir". Grâce à ce label, son lecteur d'écran lui dira directement : "Note 5 sur 5". -->
+     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                </div>
+                                <a href="#" class="btn btn-outline-info btn-sm">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+
+    <!--FOOTER
+ -->
+    <footer>
+        <div class="bg-dark text-light py-5 border-top border-secondary">
+            <div class="container">
+                <div class="row g-4">
+
+                    <div class="col-md-6 col-lg-3">
+                        <!-- col-lg-3 (Ordinateur) : Divise la largeur par 4 (12 / 3 = 4). Vos éléments sont alignés sur une seule ligne.col-md-6 (Tablette) : Divise la largeur par 2 (12 / 6 = 2). Les éléments se rangent sur deux lignes. -->
+                        <h4 class="fw-bold">AfriTalent</h4>
+                        <p class="text-muted">
+                            La plateforme qui connecte les freelances tech africains
+                            aux entreprises qui innovent sur le continent et au-delà.
+                        </p>
+                        <div class="d-flex gap-3 mt-3">
+                            <!-- d-flex (Display Flex) : C'est la commande magique pour aligner des éléments les uns à côté des autres (horizontalement) au lieu qu'ils s'empilent verticalement.gap-3 : Elle crée un espace automatique et régulier entre chaque élément (environ 16px). Cela évite que vos icônes ne se touchent.mt-3 (Margin Top 3) : Ajoute un petit espace au-dessus du groupe (environ 16px) pour le détacher du texte qui se trouve juste au-dessus. -->
+                            <a href="#" class="text-light" aria-label="page Facebook AfriTalent"><i class="bi bi-facebook fs-5" aria-hidden="true"></i></a>
+                            <a href="#" class="text-light" aria-label="page Twitter AfriTalent"><i class="bi bi-twitter-x fs-5" aria-hidden="true"></i></a>
+                            <a href="#" class="text-light" aria-label="page LinkedIn AfriTalent"><i class="bi bi-linkedin fs-5" aria-hidden="true"></i></a>
+                            <a href="#" class="text-light" aria-label="page Instagram AfriTalent"><i class="bi bi-instagram fs-5" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="fw-bold">Liens utiles</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-1"><a href="index.html" class="text-muted text-decoration-none">Accueil</a></li>
+                            <li class="mb-1"><a href="freelances.html" class="text-muted text-decoration-none">Trouver un freelance</a></li>
+                            <li class="mb-1"><a href="tarifs.html" class="text-muted text-decoration-none">Nos tarifs</a></li>
+                            <li class="mb-1"><a href="about.html" class="text-muted text-decoration-none">À propos</a></li>
+                            <li class="mb-1"><a href="blog.html" class="text-muted text-decoration-none">Blog</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="fw-bold">Ressources</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-1"><a href="#" class="text-muted text-decoration-none">Centre d'aide</a></li>
+                            <li class="mb-1"><a href="#" class="text-muted text-decoration-none">Conditions d'utilisation</a></li>
+                            <li class="mb-1"><a href="#" class="text-muted text-decoration-none">Confidentialité</a></li>
+                            <li class="mb-1"><a href="#" class="text-muted text-decoration-none">Guide du freelance</a></li>
+                            <li class="mb-1"><a href="#" class="text-muted text-decoration-none">Guide entreprise</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="fw-bold">Contact</h5>
+                        <ul class="list-unstyled text-muted">
+                            <li class="mb-2"><i class="bi bi-envelope me-2" aria-hidden="true"></i>hello@afritalent.africa</li>
+                            <li class="mb-2"><i class="bi bi-telephone me-2" aria-hidden="true"></i>+221 78 000 11 22</li>
+                            <li><i class="bi bi-geo-alt me-2" aria-hidden="true"></i>Dakar, Sénégal</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <hr class="border-secondary mt-4">
+                <p class="text-center text-muted mb-0">
+                    &copy; <span>2026</span> AfriTalent. Tous droits réservés.
+                </p>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

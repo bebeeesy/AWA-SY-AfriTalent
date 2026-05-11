@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriTalent - Tarifs</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+   <!--  -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+
+                <a class="navbar-brand fw-bold fs-4" href="index.html">
+                    <img src="images/logo.png" alt="logo AfriTalent" width="38" height="38" class="me-2">
+                    AfriTalent
+                </a>
+
+   <button
+                    class="navbar-toggler"
+                    type="button"
+            data-bs-toggle="collapse"
+       data-bs-target="#menu-nav"
+                    aria-controls="menu-nav"
+    aria-expanded="false"
+                    aria-label="ouvrir le menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menu-nav">
+                    <ul class="navbar-nav ms-auto me-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Accueil</a>
+  </li>
+                        <li class="nav-item">
+  <a class="nav-link" href="freelance.html">Freelances</a>
+                        </li>
+                        <li class="nav-item">
+         <a class="nav-link active" aria-current="page" href="tarif.html">Tarifs</a>
+                        </li>
+                        <li class="nav-item">
+     <a class="nav-link" href="about.html">À propos</a>
+                        </li>
+                     
+                        <li class="nav-item">
+           <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+                    </ul>
+   <a href="contact.html" class="btn btn-info text-dark fw-bold">Rejoindre AfriTalent</a>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="mt-5 pt-4">
+<!-- mt-5 (Margin Top 5) : Ajoute une marge extérieure maximale en haut (environ 48px). Cela pousse la section vers le bas pour l'isoler des autres.pt-4 (Padding Top 4) : Ajoute un espace à l'intérieur du bloc, en haut  -->
+
+        <!-- 
+             EN-TETE PAGE TARIFS
+         -->
+        <section aria-label="introduction des tarifs">
+            <div class="container py-5 text-center">
+                <!-- container : Aligne votre contenu sur la grille centrale du site.py-5 : Ajoute un large espace en haut et en bas (3rem ou 48px) pour que la section ne soit pas étouffée.text-center : Centre horizontalement tous les textes, boutons ou icônes à l'intérieur. -->
+                <h1 class="fw-bold display-5">Choisissez votre plan</h1>
+               <!-- fw-bold : Met le texte en gras prononcé. Cela donne une impression de solidité et d'importance à l'information.display-5 : C'est une classe de typographie "d'affichage". Elle est beaucoup plus grande qu'un titre <h1> classique, mais elle reste élégante et plus fine qu'un display-1. -->
+                <p class="lead text-muted mt-3">
+                    <!-- lead : Augmente légèrement la taille de la police et affine le poids des lettres. C'est parfait pour une phrase d'accroche juste sous un titre, car cela rend le texte plus lisible et "important".text-muted : Comme nous l'avons vu, elle donne une couleur grise adoucie. Cela crée un contraste pro avec le titre noir.mt-3 : (Margin Top 3) Ajoute un espace de 1rem (16px) au-dessus pour que le paragraphe ne colle pas au titre. -->
+                    Des offres flexibles adaptées aux freelances indépendants comme aux grandes entreprises.
+                    Commencez gratuitement, évoluez à votre rythme.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- 
+             PLANS TARIFAIRES
+             3 cartes : Gratuit / Pro (mis en avant) / Entreprise
+         -->
+        <section aria-label="plans et tarifs">
+            <div class="container pb-5">
+                <div class="row g-4 justify-content-center align-items-stretch">
+
+<!-- row : Le conteneur horizontal de base.g-4 : L'espace (gouttière) de 24px entre vos colonnes pour qu'elles ne se touchent pas.justify-content-center : Si vous avez moins de colonnes que prévu (par exemple seulement 2 cartes sur une ligne qui peut en contenir 4), cette classe les centre horizontalement au milieu de la page au lieu de les laisser à gauche.align-items-stretch : C'est l'astuce pour un design pro. Elle force toutes les colonnes d'une même ligne à avoir exactement la même hauteur, même si l'une d'elles contient moins de texte que les autres. -->
+                    <!-- Plan Gratuit -->
+                    <div class="col-md-6 col-lg-4">
+                        <!-- col-lg-4 (Ordinateur) : Chaque bloc prend 4 unités. Vous aurez donc 3 éléments alignés par ligne (12 / 4 = 3).col-md-6 (Tablette) : Chaque bloc prend 6 unités, soit la moitié. Vous aurez donc 2 éléments par ligne (12 / 6 = 2). -->
+                 <div class="card h-100 bg-dark text-white border-secondary text-center p-3">
+                            <!-- h-100 : Indispensable. Elle force toutes vos cartes à avoir la même hauteur sur une même ligne, même si l'une contient plus de texte que l'autre.bg-dark text-white : Maintient le look élégant noir et blanc.border-secondary : C'est la nouveauté. Au lieu de n'avoir aucune bordure (border-0), vous ajoutez un fin contour gris. Cela permet de mieux distinguer chaque bloc si le fond de votre page est aussi sombre. -->
+                            <div class="card-body">
+      <h2 class="h4 fw-bold">Gratuit</h2>
+                <p class="display-5 fw-bold my-3">
+                                    0 XOF
+       <span class="fs-6 text-muted fw-normal">/ mois</span>
+             <!-- fs-6 : (Font Size 6) C'est la plus petite taille de police standard dans Bootstrap (environ 14px). Elle permet d'afficher des détails sans qu'ils ne prennent trop de place.text-muted : Comme nous l'avons vu, elle donne une couleur grise adoucie. Cela indique visuellement que cette information est moins importante que le titre principal.fw-normal : Elle retire le gras (bold) pour que le texte soit fin. C'est le contraste parfait si vous placez ce texte juste en dessous d'un nom qui est, lui, en fw-bold -->
+   </p>
+ <p class="text-muted">Pour découvrir la plateforme sans engagement.</p>
+
+                 <ul class="list-unstyled mt-4 text-start">
+ <li class="mb-2">
+          <i class="bi bi-check-circle-fill text-info me-2" aria-hidden="true"></i>
+          Profil freelance public
+            </li>
+    <li class="mb-2">
+                                        <i class="bi bi-check-circle-fill text-info me-2" aria-hidden="true"></i>
+                3 candidatures par mois
+                                    </li>
+      <li class="mb-2">
+                      <i class="bi bi-check-circle-fill text-info me-2" aria-hidden="true"></i>
+                                        Messagerie basique
+               </li>
+                                    <li class="mb-2 text-muted">
+                  <i class="bi bi-x-circle me-2" aria-hidden="true"></i>
+                                        Mise en avant du profil
+                                    </li>
+                                    <li class="mb-2 text-muted">
+  <i class="bi bi-x-circle me-2" aria-hidden="true"></i>
+                                        Statistiques détaillées
+                                    </li>
+                                    <li class="mb-2 text-muted">
+        <i class="bi bi-x-circle me-2" aria-hidden="true"></i>
+                                        Support prioritaire
+               </li>
+                                </ul>
+
+                                <a href="contact.html" class="btn btn-outline-info w-100 mt-3">
+                      Commencer gratuitement
+                                </a>
+                            </div>
+          </div>
+                    </div>
+
+
+                    <!-- Plan Pro - mis en avant -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 bg-dark text-white border-info border-2 text-center p-3">
+                            <div class="card-body">
+
+                                <!-- Badge populaire -->
+                                <span class="badge bg-info text-dark mb-2">Populaire</span>
+
+                                <h2 class="h4 fw-bold">Pro</h2>
+                                <p class="display-5 fw-bold my-3">
+         9 900 XOF
+                                    <span class="fs-6 text-muted fw-normal">/ mois</span>
+                                </p>
+        <p class="text-muted">Pour les freelances qui veulent se démarquer.</p>
+
+                                <ul class="list-unstyled mt-4 text-start">
+                                    <li class="mb-2">
+                                        <i class="bi bi-check-circle-fill text-info me-2" aria-hidden="true"></i>
+                                        Profil avec badge Pro vérifié
+                                    </li>
+    <li class="mb-2">
+                                        <i class="bi bi-check-circle-fill text-info me-2" aria-hidden="true"></i>
+                                        Candidatures illimitées
+       </li>
+                                    <li class="mb-2">
+               <i class="bi bi-check-circle-fill text-info me-2" aria-hidden="true"></i>
+                                        Messagerie avancée
+      </li>
+                                    <li class="mb-2">
+                 <i class="bi bi-check-circle-fill text-info me-2" aria-hidden="true"></i>
+                                        Mise en avant du profil
+                                    </li>
+                                    <li class="mb-2">
+         <i class="bi bi-check-circle-fill text-info me-2" aria-hidden="true"></i>
+                                        Statistiques détaillées
+                                    </li>
+                                    <li class="mb-2 text-muted">
+               <i class="bi bi-x-circle me-2" aria-hidden="true"></i>
+                                        Support prioritaire dédié
+                                    </li>
+                                </ul>
+
+         <a href="contact.html" class="btn btn-info text-dark fw-bold w-100 mt-3">
+                                    Choisir Pro
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Plan Entreprise -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 bg-dark text-white border-secondary text-center p-3">
+                            <div class="card-body">
+                                <h2 class="h4 fw-bold">Entreprise</h2>
+                                <p class="display-5 fw-bold my-3">
+                                    49 900 XOF
+                                    <span class="fs-6 text-muted fw-normal">/ mois</span>
+                                </p>
+                                <p class="text-muted">Pour les entreprises à fort volume de recrutement.</p>
+
+                                <ul class="list-unstyled mt-4 text-start">
+                                    <li class="mb-2">
+                                        <i class="bi bi-check-circle-fill text-info me-2" aria-hidden="true"></i>
+                                        Accès illimité au catalogue
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check-circle-fill text-info me-2" aria-hidden="true"></i>
+                                        Offres illimitées
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check-circle-fill text-info me-2" aria-hidden="true"></i>
+                                        Messagerie avancée
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check-circle-fill text-info me-2" aria-hidden="true"></i>
+                                        Mise en avant des offres
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check-circle-fill text-info me-2" aria-hidden="true"></i>
+                                        Rapports et statistiques
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check-circle-fill text-info me-2" aria-hidden="true"></i>
+                                        Support dédié 24h/7j
+                                    </li>
+                                </ul>
+
+                                <a href="contact.html" class="btn btn-outline-info w-100 mt-3">
+                                    Nous contacter
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+
+        <!--
+             FAQ EN ACCORDION BOOTSTRAPppppppppppp
+             5 questions 
+        -->
+        <section aria-label="questions fréquentes">
+            <div class="container py-5">
+
+                <h2 class="fw-bold text-center mb-5">Questions fréquentes</h2>
+
+                <div class="accordion">
+
+                    <div class="accordion-item bg-dark border-secondary">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button bg-dark text-white" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#question-un"
+                                aria-expanded="true" aria-controls="question-un">
+                                Comment créer mon compte sur AfriTalent ?
+                            </button>
+                        </h3>
+                        <div class="accordion-collapse collapse show" id="question-un">
+                            <div class="accordion-body text-muted">
+                                Cliquez sur "Rejoindre AfriTalent", remplissez le formulaire avec votre
+                                nom, email et mot de passe, choisissez votre rôle (freelance ou entreprise)
+                                puis validez votre adresse email. Votre profil est actif en moins de 5 minutes.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bg-dark border-secondary">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed bg-dark text-white" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#question-deux"
+                                aria-expanded="false" aria-controls="question-deux">
+                                Quels moyens de paiement sont acceptés ?
+                            </button>
+                        </h3>
+                        <div class="accordion-collapse collapse" id="question-deux">
+                            <div class="accordion-body text-muted">
+                               <p> AfriTalent accepte les paiements par carte bancaire Visa et Mastercard,
+                                par virement, et via les solutions mobiles africaines comme Wave, Orange Money
+                                et MTN Mobile Money. Tous les paiements sont sécurisés et cryptés.
+                            </p></div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bg-dark border-secondary">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed bg-dark text-white" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#question-trois"
+                                aria-expanded="false" aria-controls="question-trois">
+                                Comment fonctionne la garantie de paiement ?
+                            </button>
+                        </h3>
+                        <div class="accordion-collapse collapse" id="question-trois">
+                            <div class="accordion-body text-muted">
+                                On utilise un système d'escrow : l'entreprise dépose les fonds sur la
+                                plateforme avant le début du projet. Le freelance reçoit son paiement
+                                uniquement après validation du livrable. En cas de litige, notre équipe
+                                intervient pour trouver une solution équitable.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bg-dark border-secondary">
+                    <!-- bg-dark : Applique le fond noir/anthracite à l'intérieur de l'élément déplié. Cela garantit une cohérence visuelle parfaite avec vos cartes et votre footer.border-secondary : Remplace la bordure bleue ou grise claire par défaut par une bordure grise discrète. C'est crucial sur un fond sombre pour que les séparations entre les questions soient visibles mais élégantes. -->
+                        <h3 class="accordion-header">
+                            <!-- accordion-header définit la partie "cliquable" de votre accordéon. C'est l'étage qui contient la question ou le titre de la section. -->
+                            <button class="accordion-button collapsed bg-dark text-white" type="button"
+                
+             data-bs-toggle="collapse" data-bs-target="#question-quatre"
+                                aria-expanded="false" aria-controls="question-quatre">
+        Puis-je changer de plan à tout moment ?
+                            </button>
+                            <!-- class="accordion-button collapsed bg-dark text-white" type="button" -->
+                     <!-- data-bs-toggle="collapse" : C'est l'ordre d'action. Il dit à Bootstrap : « Quand on clique sur ce bouton, active le système de repli (ouverture/fermeture). »data-bs-target="#question-quatre" : C'est le viseur. Il désigne l'élément précis qui doit s'ouvrir. Le # signifie qu'il cherche l'élément qui a l'identifiant id="question-quatre".aria-expanded="false" : C'est l'indicateur d'état pour les malvoyants. false signifie que la réponse est actuellement cachée. Il passera à true automatiquement quand le menu s'ouvrira.aria-controls="question-quatre" : C'est un lien logique de sécurité. Il confirme que ce bouton a le contrôle total sur le bloc question-quatre. -->
+                        </h3>
+                        <div class="accordion-collapse collapse" id="question-quatre">
+                            <div class="accordion-body text-muted">
+   <!-- accordion-body : C'est la classe spécifique de Bootstrap qui applique un espacement (padding) interne correct. Elle permet au texte de ne pas être collé aux bords du panneau déplié.text-muted : Comme nous l'avons vu pour les autres sections, elle rend le texte gris adouci. Cela crée un contraste élégant : la question (le titre) reste bien visible en noir ou blanc, et la réponse (le corps) est plus discrète. -->
+                                Oui, vous pouvez upgrader ou downgrader votre plan depuis votre tableau de
+   bord à tout moment. Les changements sont immédiats. Si vous descendez de
+                                plan en cours de mois, la différence est créditée sur votre prochaine facture.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bg-dark border-secondary">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed bg-dark text-white" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#question-cinq"
+                                aria-expanded="false" aria-controls="question-cinq">
+                                AfriTalent prend-il une commission sur les missions ?
+                            </button>
+                        </h3>
+                        <div class="accordion-collapse collapse" id="question-cinq">
+                            <div class="accordion-body text-muted">
+                                Une commission de 10% est prélevée sur chaque transaction. Elle couvre
+                                la garantie de paiement, la sécurité de la plateforme et le support client.
+                                Les abonnés Pro bénéficient d'une commission réduite à 7%.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+
+    <!-- 
+         FOOTER
+ -->
+    <footer>
+        <div class="bg-dark text-light py-5 border-top border-secondary">
+            <!-- bg-dark : Applique un fond noir/anthracite. C'est le standard pour les bas de page modernes, créant un contraste fort avec le reste du site.text-light : Utilise un texte gris très clair/blanc cassé. C'est plus reposant pour les yeux que le blanc pur sur un fond sombre.py-5 : Ajoute un espace vertical important (Padding Top & Bottom). Cela permet à vos informations de contact et à vos liens de "respirer" sans être étouffés.border-top : Ajoute une ligne de séparation juste au-dessus de la section.border-secondary : Donne à cette ligne une couleur grise discrète. Cela marque la fin du contenu principal de manière subtile, sans coupure brutale. -->
+            <div class="container">
+                <div class="row g-4">
+
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="fw-bold">AfriTalent</h4>
+                        <p class="text-muted">
+                            La plateforme qui connecte les freelances tech africains
+                            aux entreprises qui innovent sur le continent et au-delà.
+                        </p>
+                        <div class="d-flex gap-3 mt-3">
+                            <a href="#" class="text-light" aria-label="page Facebook AfriTalent"><i class="bi bi-facebook fs-5" aria-hidden="true"></i></a>
+                            <a href="#" class="text-light" aria-label="page Twitter AfriTalent"><i class="bi bi-twitter-x fs-5" aria-hidden="true"></i></a>
+                            <a href="#" class="text-light" aria-label="page LinkedIn AfriTalent"><i class="bi bi-linkedin fs-5" aria-hidden="true"></i></a>
+                            <a href="#" class="text-light" aria-label="page Instagram AfriTalent"><i class="bi bi-instagram fs-5" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="fw-bold">Liens utiles</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-1"><a href="index.html" class="text-muted text-decoration-none">Accueil</a></li>
+                            <li class="mb-1"><a href="freelances.html" class="text-muted text-decoration-none">Trouver un freelance</a></li>
+                            <li class="mb-1"><a href="tarifs.html" class="text-muted text-decoration-none">Nos tarifs</a></li>
+                            <li class="mb-1"><a href="about.html" class="text-muted text-decoration-none">À propos</a></li>
+                            <li class="mb-1"><a href="blog.html" class="text-muted text-decoration-none">Blog</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="fw-bold">Ressources</h5>
+         <ul class="list-unstyled">
+                            <li class="mb-1"><a href="#" class="text-muted text-decoration-none">Centre d'aide</a></li>
+                            <li class="mb-1"><a href="#" class="text-muted text-decoration-none">Conditions d'utilisation</a></li>
+        <li class="mb-1"><a href="#" class="text-muted text-decoration-none">Confidentialité</a></li>
+                            <li class="mb-1"><a href="#" class="text-muted text-decoration-none">Guide du freelance</a></li>
+                            <li class="mb-1"><a href="#" class="text-muted text-decoration-none">Guide entreprise</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <!-- col-lg-3 (Ordinateur) : Chaque bloc prend 3 unités. On a donc 4 blocs alignés (3 x 4 = 12).col-md-6 (Tablette) : Chaque bloc prend 6 unités, soit la moitié. On a donc 2 blocs par ligne. -->
+    <h5 class="fw-bold">Contact</h5>
+                        <ul class="list-unstyled text-muted">
+                            <li class="mb-2"><i class="bi bi-envelope me-2" aria-hidden="true"></i>hello@afritalent.africa</li>
+    <li class="mb-2"><i class="bi bi-telephone me-2" aria-hidden="true"></i>+221 78 575 40 66</li>
+                            <li><i class="bi bi-geo-alt me-2" aria-hidden="true"></i>Dakar, Sénégal</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <hr class="border-secondary mt-4">
+                <p class="text-center text-muted mb-0">
+                    &copy; <span>2026</span> AfriTalent. Tous droits réservés.
+                </p>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
