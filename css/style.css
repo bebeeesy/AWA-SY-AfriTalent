@@ -1,0 +1,231 @@
+/* Police 1 */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap');
+
+/* 2 eme google font (police) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+:root {
+    /*les variablessssssssssssssss  */
+    /* couleur texte clair  */
+--text-light :   #E8F8F9; 
+/* fond */
+--background-primary :  #050D18;
+/* fond carteee  */
+--bg-card :  #0A2540;
+/* couleur acent */
+--color-accent : #00C2CB;
+/* le texte va etre en gris */
+--text-muted : #8899AA;
+/* polices */
+--police-titre : 'Syne', sans-serif;
+--police-corps :  'Inter', sans-serif;
+/* espacements  */
+--espacement-sm : 1rem;
+--espacement-lg : 4rem;
+--espacement-md :2rem;
+/* Bordures  */
+--rayon-carte :12px 
+/* Transitionn  */
+--transition :all 0.3s ease;
+--transition : all 0.3 ease;
+}
+*;
+*::before,
+*::after {
+box-sizing : border-box;
+margin : 0;
+padding : 0;
+/* *, *::before, *::after : Les sélecteurs universels. Ils garantissent que cette règle s'applique absolument à tou */
+/* Le border-box force l'élément à conserver la taille exacte que tu lui donnes : le padding et la bordure sont absorbés à l'intérieur au lieu de s'ajouter par-dessus. Cela évite que tes éléments ne se déforment ou ne dépassent de l'écran. */
+}
+body {
+    background-color: var(--background-primary);
+    line-height: 1.7;
+    font-size: 1rem;
+    font-family:var(--police-corps);
+    color: var(--text-light);
+
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: var(--police-titre);
+line-height: 1.2;
+font-weight: 700;
+color: var(--text-light);
+
+}
+h1 {
+    font-weight: 800;
+    font-size: 3rem;
+}
+h2 {
+    font-size: 1.4rem;
+}
+/* liens yi */
+a {
+text-decoration: none;
+transition: var(--transition);
+
+}
+/* pour les images  */
+img {
+    display : block;
+    /* Le display: block; transforme un élément en un bloc complet */
+max-width: 100%;
+height: auto;
+}
+.navbar {
+    font-family: var(--police-titre);
+    color: var(--color-accent);
+    transition: var(--transition);
+    background-color: var(--background-primary) !important;
+    border-bottom: 1px solid var(--bg-card);
+padding: 1rem 0;
+}
+/* le logo */
+.navbar-brand {
+    color: var(--color-accent) !important;
+    font-weight :800;
+    letter-spacing: -0.5px;
+    font-size: 1.5rem;
+    font-family: var(--police-titre);
+/* !important : je l'utilise seulement le bootstrap écrase mon style  genre pour que le css prime sur le boostrap  */
+
+}
+/* liens de navigation */
+/* .navbar .nav-link:hover :Ce sélecteur cible l'état au survol (hover) de tes liens de navigation. */
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--color-accent) !important;
+
+}
+/* bouton cta  */
+.navbar .btn-info {
+    color: var(--background-primary) !important;
+    transition: var(--transition);
+    background-color: var(--color-accent);
+padding: 0.5rem 1.2rem;
+font-weight: 600;
+font-family: var(--police-corps);
+border-color: var(--color-accent);
+border-radius: 8px;
+}
+.navbar-toggler {
+    border-color: var(--text-muted);
+}
+.navbar-toggler-icon {
+    /* filter: invert(1); : Cette fonction inverse les couleurs. Comme l'icône par défaut est souvent noire, elle devient blanche.Utilité : C'est la solution la plus rapide pour rendre le menu visible si tu utilises une barre de navigation foncée (Dark Mode) sans avoir à changer le fichier image de l'icône. */
+    filter:invert(1);
+}
+/* les cartes */
+.card {
+    background-color: var(--bg-card) !important;
+    color: var(--text-light) !important;
+    border-radius: var(--rayon-carte) !important ;
+   /*  border-radius sert à arrondir les angles de tes élément */
+    border: 1px solid rgba(0, 194, 203, 0.15) !important;
+}
+.card-text,
+.card .text-muted {
+    color: var(--text-muted) !important;
+
+}
+.btn-info:hover {
+    border-color: var(--text-light) !important;
+    background-color: var(--text-light) !important;
+}
+.btn-info {
+    border-color: var(--color-accent) !important;
+transition: var(--transition);
+color: var(--color-accent) !important;
+border-radius: 8px;
+font-weight: 600;
+}
+.btn-outline-info:hover {
+    color: var(--background-primary) !important;
+    background-color: var(--color-accent) !important;
+
+}
+/* la partie des sections  */
+section {
+   
+padding: var(--espacement-lg) 0;
+}
+/* texte gris pou les fonds sombre */
+.text-muted {
+     color: var(--text-muted) !important;
+}
+/* texte accent */
+.text-info {
+    color: var(--color-accent) !important;
+
+}
+/*  footer*/
+footer {
+    border-top: 1px solid rgba(0, 194, 203, 0.2);
+    background-color: var(--bg-card);
+}
+footer h4,
+footer h5 {
+    font-family: var(--police-titre);
+    color: var(--text-light);
+}
+footer .text-muted {
+    color:var(--text-muted) !important;
+
+}
+footer hr {
+    border-color : rgba(0, 194, 203, 0.2) !important;
+}
+/* formulaire */
+.form-control,
+.form-select {
+    border-radius: 8px;
+    border-color: rgba(0, 194, 203, 0.3) !important;
+    background-color: var(--bg-card) !important;
+    color: var(--bg-card) !important;
+}
+.form-control::placeholder {
+    background-color: var(--bg-card) !important;
+    border-color: var(--color-accent) !important;
+    box-shadow: 0 0 0 3px rgba(0, 194, 203, 0.15) !important;
+/* La couleur (0, 194, 203) : C'est un bleu turquoise (ou cyan) très vif.La transparence (0.15) : Elle est réglée à 15 %. Cela signifie que la couleur est très légère et laisse transparaître ce qu'il y a derrière. */
+}
+.form-label{
+    font-weight: 500;
+color: var(--text-light);
+}
+/* faq */
+.accordion-item {
+    overflow: hidden;
+    /* Coupure nette : Tout ce qui sort du cadre de l'élément est masqué et devient invisible.Pas de défilement : Contrairement à scroll, il empêche l'utilisateur de voir le contenu qui dépasse.Propreté : Il force les éléments enfants à respecter les angles arrondis (border-radius) du parent. */
+    background-color: var(--bg-card) !important;
+border-radius: var(--rayon-carte) !important;
+border-color: rgba(0, 194, 203, 0.2) !important;
+margin-bottom: 0.5rem;
+}
+.accordion-button {
+    background-color: var(--bg-card) !important;
+    font-weight: 500;
+    color: var(--text-light) !important;
+    font-family: var(--text-light);
+}
+.accordion-button::not(.collapsed) {
+    box-shadow: none !important;
+    color:var(--color-accent) !important;
+
+}
+.accordion-button::after {
+    filter:invert(1) sepia(1) saturate(5) hue-rotate(150deg);
+    /* Préparation : L'élément est inversé en blanc (invert) puis transformé en une base colorée (sepia).Boost : La couleur est rendue ultra-vive (saturate).Teinte : Le hue-rotate décale la couleur pour obtenir le résultat final (ici, un bleu/cyan). */
+}
+.accordion-body {
+    color: var(--text-muted) !important;
+    background-color: var(--bg-card) !important;
+
+}
+.carousel-control-prev-icon,
+.carousel-next-icon {
+    filter:invert(0.5) sepia(1) saturate(5) hue-rotate(150deg);
+}
+.carousel-indicator [data-bs-target] {
+    background-color: var(--color-accent);
+}
