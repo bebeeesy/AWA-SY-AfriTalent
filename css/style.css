@@ -405,3 +405,107 @@ box-shadow: 0 12px 30px rgba(0, 194, 203, 0.15);
     color: var(--color-accent) !important;
     background-color: var(--bg-card) !important;
 }
+@media (max-width:576px) {
+    /* La règle @media en CSS permet d'appliquer des blocs de styles spécifiques uniquement si certaines conditions liées à l'appareil de l'utilisateur (taille d'écran, orientation, résolution) sont remplies. */
+.section-hero h1 {
+    font-size: 1.8rem;
+
+}
+.section-hero h2 {
+    font-size: 1rem;
+}
+.section-hero .d-flex {
+    flex-direction: column;
+}
+.bento-grid{
+    grid-template-columns: 1fr;
+}
+.bento-carte-1,
+.bento-carte-2,
+.bento-carte-3,
+.bento-carte-4 {
+    grid-row: span 1;
+    grid-column: span 1;
+}
+.bloc-stats h3 {
+    font-size: 1.8rem;
+}
+h2 {
+
+    font-size: 1.5rem;
+}
+.section-temoignages .lead {
+    padding: 0.1rem;
+    font-size: 0.95rem;
+}
+.section-cta h2 {
+    font-size: 1.4rem;
+}
+footer .d-flex {
+    justify-content: center;
+    /* justify-content: sert à aligner les éléments horizontalement dans un conteneur Flexbox ou Grid. */
+}
+
+}
+@media (min-width:577px) and (max-width:768px) {
+    .section-hero h1 {
+        font-size: 2.2rem;
+    }
+.bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+}
+.bento-carte-1 {
+    grid-row: span 1;
+    grid-column: span 2;
+    /* grid-column sert à dire à un élément combien de colonnes de la grille il doit occuper. */
+}
+.bento-carte-4 {
+    grid-column: span 2;
+}
+}
+@media (min-width:768px) and (max-width:1199px) {
+.section-hero h1 {
+    font-size: 2.8rem;
+}
+.bento-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+}
+@media (min-width: 1200px) {
+    .section-hero h1 {
+        font-size: 3.5rem;
+    }
+    .bento-grid {
+        grid-template-columns: repeat(4, 1fr);
+    /* grid-template-columns : Définit le nombre et la taille des colonnes du conteneur grid.repeat(4, ...) : Fonction qui évite de répéter la même valeur. Elle dit au navigateur de dupliquer 4 fois la configuration spécifiée.1fr : Signifie 1 fraction. C'est une unité de mesure propre au CSS Grid qui représente une part proportionnelle de l'espace libre restant dans le conteneur */
+    }
+}
+@media (max-width:991px) {
+    .navbar-collapse {
+        margin-top: 0.5rem;
+        background-color: var(--background-primary);
+    border: 1px solid rgba(0, 194, 203, 0.15);
+border-radius: var(--rayon-carte);
+padding: 1rem;    
+}
+.navbar-nav {
+    margin-top: 0.5rem;
+    width: 100%;
+    text-align: center;
+}
+}
+@media (max-width:576px) {
+    .row .col-md-6 {
+        width: 100%;
+    }
+    iframe {
+        height: 200px;
+    }
+}
+@media (max-width:576px) {
+    .bloc-stats h3,
+    [data-target] {
+        font-size: 2rem;
+    }
+}
