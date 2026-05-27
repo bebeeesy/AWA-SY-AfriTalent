@@ -23,12 +23,12 @@
 --espacement-lg : 4rem;
 --espacement-md :2rem;
 /* Bordures  */
---rayon-carte :12px 
+--rayon-carte : 12px ;
 /* Transitionn  */
---transition :all 0.3s ease;
---transition : all 0.3 ease;
+
+--transition : all 0.3s ease;
 }
-*;
+*,
 *::before,
 *::after {
 box-sizing : border-box;
@@ -72,6 +72,7 @@ img {
 max-width: 100%;
 height: auto;
 }
+/* navbar fond sombre ,logo et les liens bien alignes */
 .navbar {
     font-family: var(--police-titre);
     color: var(--color-accent);
@@ -80,7 +81,7 @@ height: auto;
     border-bottom: 1px solid var(--bg-card);
 padding: 1rem 0;
 }
-/* le logo */
+/* le logo dans nav */
 .navbar-brand {
     color: var(--color-accent) !important;
     font-weight :800;
@@ -91,6 +92,16 @@ padding: 1rem 0;
 
 }
 /* liens de navigation */
+.navbar .nav-link {
+    font-weight: 500;
+    font-family: var(--police-corps);
+    transition: var(--transition);
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    padding: 0.5rem 1rem;
+
+}
+/* liens actif au survol */
 /* .navbar .nav-link:hover :Ce sélecteur cible l'état au survol (hover) de tes liens de navigation. */
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
@@ -108,6 +119,7 @@ font-family: var(--police-corps);
 border-color: var(--color-accent);
 border-radius: 8px;
 }
+/* icone hamburger mob */
 .navbar-toggler {
     border-color: var(--text-muted);
 }
@@ -128,6 +140,7 @@ border-radius: 8px;
     color: var(--text-muted) !important;
 
 }
+/* les boutons */
 .btn-info:hover {
     border-color: var(--text-light) !important;
     background-color: var(--text-light) !important;
@@ -145,20 +158,21 @@ font-weight: 600;
 
 }
 /* la partie des sections  */
+/* Espacement vertical cohérent entre les sections */
 section {
    
 padding: var(--espacement-lg) 0;
 }
-/* texte gris pou les fonds sombre */
+/* texte gris adapté au fond sombre */
 .text-muted {
      color: var(--text-muted) !important;
 }
-/* texte accent */
+/* texte accent cyan */
 .text-info {
     color: var(--color-accent) !important;
 
 }
-/*  footer*/
+/*  footer Fond légèrement plus sombre que le body*/
 footer {
     border-top: 1px solid rgba(0, 194, 203, 0.2);
     background-color: var(--bg-card);
@@ -175,7 +189,7 @@ footer .text-muted {
 footer hr {
     border-color : rgba(0, 194, 203, 0.2) !important;
 }
-/* formulaire */
+/* formulaire fond sombre*/
 .form-control,
 .form-select {
     border-radius: 8px;
@@ -193,7 +207,7 @@ footer hr {
     font-weight: 500;
 color: var(--text-light);
 }
-/* faq */
+/* faq  adapte fond sombre*/
 .accordion-item {
     overflow: hidden;
     /* Coupure nette : Tout ce qui sort du cadre de l'élément est masqué et devient invisible.Pas de défilement : Contrairement à scroll, il empêche l'utilisateur de voir le contenu qui dépasse.Propreté : Il force les éléments enfants à respecter les angles arrondis (border-radius) du parent. */
@@ -222,6 +236,7 @@ margin-bottom: 0.5rem;
     background-color: var(--bg-card) !important;
 
 }
+/* carousel temoignage adapte au fond sombre */
 .carousel-control-prev-icon,
 .carousel-next-icon {
     filter:invert(0.5) sepia(1) saturate(5) hue-rotate(150deg);
@@ -229,6 +244,9 @@ margin-bottom: 0.5rem;
 .carousel-indicator [data-bs-target] {
     background-color: var(--color-accent);
 }
+/* section hero */
+/* disposition asymetrique typographie expressive */
+/* titre estgrand et accrocheur , image a droite  */
 .section-hero {
     align-items: center;
     min-height: 90vh;
@@ -237,6 +255,7 @@ margin-bottom: 0.5rem;
     
     padding-top: 6rem;
 }
+/* titre hero tres grand et expressif */
 .section-hero h1 {
     letter-spacing: -1px;
     font-size: clamp(2.2rem,5vw,4rem);
@@ -244,10 +263,12 @@ margin-bottom: 0.5rem;
     line-height: 1.1;
 
 }
+/* mot en couleur cyan dans le titre  */
 .section-hero h1 span {
     color: var(--color-accent);
 
 }
+/* sous-titrehero */
 .section-hero h2 {
 line-height: 1.7;
 color: var(--text-muted);
@@ -256,11 +277,13 @@ font-weight: 400;
     font-size: 1.1rem;
 font-family: var(--text-muted);
 }
+/* image hero legerement incline pour l'asymetrie */
 .section-hero img {
 
     border: 2px solid rgba(0, 194, 203, 0.2);
     border-radius: var(--rayon-carte);
 }
+/* bloc statistique sous le hero  */
 .bloc-stats {
     margin-bottom: var(--espacement-md);
     border-top: 1px solid rgba(0, 194, 203, 0.15);
@@ -272,35 +295,350 @@ font-family: var(--text-muted);
     font-weight: 800;
     font-size: 2.5rem;
 }
-.bloc-stats {
+.bloc-stats p {
     color: var(--text-muted);
     font-size: 0.9rem;
 }
+/* bento grid - section (comment ça marche ) */
+/*  tout les cartes nont pas la meme taille*/
+/* on utilise le css grid pour creeer la grille modulaire */
 .bento-grid {
     gap: 1.2rem;
     grid-template-columns: repeat(4,1fr);
     display: grid;
     grid-template-rows: auto auto;
 }
+
+:root {
+    /*les variablessssssssssssssss  */
+  /* couleur texte clair  */
+--text-light :   #E8F8F9; 
+/* fond */
+--background-primary :  #050D18;
+/* fond carteee  */
+--bg-card :  #0A2540;
+/* couleur acent */
+--color-accent : #00C2CB;
+/* le texte va etre en gris */
+--text-muted : #8899AA;
+/* polices */
+--police-titre : 'Syne', sans-serif;
+--police-corps :  'Inter', sans-serif;
+/* espacements  */
+--espacement-sm : 1rem;
+--espacement-lg : 4rem;
+--espacement-md :2rem;
+/* Bordures  */
+--rayon-carte :12px 
+/* Transitionn  */
+--transition :all 0.3 ease;
+--transition : all 0.3s ease;
+}
+*,
+*::before,
+*::after {
+box-sizing : border-box;
+margin : 0;
+padding : 0;
+/* *, *::before, *::after : Les sélecteurs universels. Ils garantissent que cette règle s'applique absolument à tou */
+/* Le border-box force l'élément à conserver la taille exacte que tu lui donnes : le padding et la bordure sont absorbés à l'intérieur au lieu de s'ajouter par-dessus. Cela évite que tes éléments ne se déforment ou ne dépassent de l'écran. */
+}
+body {
+    background-color: var(--background-primary);
+    line-height: 1.7;
+    font-size: 1rem;
+    font-family:var(--police-corps);
+    color: var(--text-light);
+
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: var(--police-titre);
+line-height: 1.2;
+font-weight: 700;
+color: var(--text-light);
+
+}
+h1 {
+    font-weight: 800;
+    font-size: 3rem;
+}
+h2 {
+    font-size: 1.4rem;
+}
+/* liens yi */
+a {
+text-decoration: none;
+transition: var(--transition);
+
+}
+/* pour les images  */
+img {
+    display : block;
+    /* Le display: block; transforme un élément en un bloc complet */
+max-width: 100%;
+height: auto;
+}
+/* navbar fond sombre ,logo et les liens bien alignes */
+.navbar {
+    font-family: var(--police-titre);
+    color: var(--color-accent);
+    transition: var(--transition);
+    background-color: var(--background-primary) !important;
+    border-bottom: 1px solid var(--bg-card);
+padding: 1rem 0;
+}
+/* le logo dans nav */
+.navbar-brand {
+    color: var(--color-accent) !important;
+    font-weight :800;
+    letter-spacing: -0.5px;
+    font-size: 1.5rem;
+    font-family: var(--police-titre);
+/* !important : je l'utilise seulement le bootstrap écrase mon style  genre pour que le css prime sur le boostrap  */
+
+}
+/* liens de navigation */
+.navbar .nav-link {
+    font-weight: 500;
+    font-family: var(--police-corps);
+    transition: var(--transition);
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    padding: 0.5rem 1rem;
+
+}
+/* liens actif au survol */
+/* .navbar .nav-link:hover :Ce sélecteur cible l'état au survol (hover) de tes liens de navigation. */
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--color-accent) !important;
+
+}
+/* bouton cta  */
+.navbar .btn-info {
+    color: var(--background-primary) !important;
+    transition: var(--transition);
+    background-color: var(--color-accent);
+padding: 0.5rem 1.2rem;
+font-weight: 600;
+font-family: var(--police-corps);
+border-color: var(--color-accent);
+border-radius: 8px;
+}
+/* icone hamburger mob */
+.navbar-toggler {
+    border-color: var(--text-muted);
+}
+.navbar-toggler-icon {
+    /* filter: invert(1); : Cette fonction inverse les couleurs. Comme l'icône par défaut est souvent noire, elle devient blanche.Utilité : C'est la solution la plus rapide pour rendre le menu visible si tu utilises une barre de navigation foncée (Dark Mode) sans avoir à changer le fichier image de l'icône. */
+    filter:invert(1);
+}
+/* les cartes */
+.card {
+    background-color: var(--bg-card) !important;
+    color: var(--text-light) !important;
+    border-radius: var(--rayon-carte) !important ;
+   /*  border-radius sert à arrondir les angles de tes élément */
+    border: 1px solid rgba(0, 194, 203, 0.15) !important;
+}
+.card-text,
+.card .text-muted {
+    color: var(--text-muted) !important;
+
+}
+/* les boutons */
+.btn-info:hover {
+    border-color: var(--text-light) !important;
+    background-color: var(--text-light) !important;
+}
+.btn-info {
+    border-color: var(--color-accent) !important;
+transition: var(--transition);
+color: var(--color-accent) !important;
+border-radius: 8px;
+font-weight: 600;
+}
+.btn-outline-info:hover {
+    color: var(--background-primary) !important;
+    background-color: var(--color-accent) !important;
+
+}
+/* la partie des sections  */
+/* Espacement vertical cohérent entre les sections */
+section {
+   
+padding: var(--espacement-lg) 0;
+}
+/* texte gris adapté au fond sombre */
+.text-muted {
+     color: var(--text-muted) !important;
+}
+/* texte accent cyan */
+.text-info {
+    color: var(--color-accent) !important;
+
+}
+/*  footer Fond légèrement plus sombre que le body*/
+footer {
+    border-top: 1px solid rgba(0, 194, 203, 0.2);
+    background-color: var(--bg-card);
+}
+footer h4,
+footer h5 {
+    font-family: var(--police-titre);
+    color: var(--text-light);
+}
+footer .text-muted {
+    color:var(--text-muted) !important;
+
+}
+footer hr {
+    border-color : rgba(0, 194, 203, 0.2) !important;
+}
+/* formulaire fond sombre*/
+.form-control,
+.form-select {
+    border-radius: 8px;
+    border-color: rgba(0, 194, 203, 0.3) !important;
+    background-color: var(--bg-card) !important;
+    color: var(--bg-card) !important;
+}
+.form-control::placeholder {
+    background-color: var(--bg-card) !important;
+    border-color: var(--color-accent) !important;
+    box-shadow: 0 0 0 3px rgba(0, 194, 203, 0.15) !important;
+/* La couleur (0, 194, 203) : C'est un bleu turquoise (ou cyan) très vif.La transparence (0.15) : Elle est réglée à 15 %. Cela signifie que la couleur est très légère et laisse transparaître ce qu'il y a derrière. */
+}
+.form-label{
+    font-weight: 500;
+color: var(--text-light);
+}
+/* faq  adapte fond sombre*/
+.accordion-item {
+    overflow: hidden;
+    /* Coupure nette : Tout ce qui sort du cadre de l'élément est masqué et devient invisible.Pas de défilement : Contrairement à scroll, il empêche l'utilisateur de voir le contenu qui dépasse.Propreté : Il force les éléments enfants à respecter les angles arrondis (border-radius) du parent. */
+    background-color: var(--bg-card) !important;
+border-radius: var(--rayon-carte) !important;
+border-color: rgba(0, 194, 203, 0.2) !important;
+margin-bottom: 0.5rem;
+}
+.accordion-button {
+    background-color: var(--bg-card) !important;
+    font-weight: 500;
+    color: var(--text-light) !important;
+    font-family: var(--text-light);
+}
+.accordion-button::not(.collapsed) {
+    box-shadow: none !important;
+    color:var(--color-accent) !important;
+
+}
+.accordion-button::after {
+    filter:invert(1) sepia(1) saturate(5) hue-rotate(150deg);
+    /* Préparation : L'élément est inversé en blanc (invert) puis transformé en une base colorée (sepia).Boost : La couleur est rendue ultra-vive (saturate).Teinte : Le hue-rotate décale la couleur pour obtenir le résultat final (ici, un bleu/cyan). */
+}
+.accordion-body {
+    color: var(--text-muted) !important;
+    background-color: var(--bg-card) !important;
+
+}
+/* carousel temoignage adapte au fond sombre */
+.carousel-control-prev-icon,
+.carousel-next-icon {
+    filter:invert(0.5) sepia(1) saturate(5) hue-rotate(150deg);
+}
+.carousel-indicator [data-bs-target] {
+    background-color: var(--color-accent);
+}
+/* section hero */
+/* disposition asymetrique typographie expressive */
+/* titre estgrand et accrocheur , image a droite  */
+.section-hero {
+    align-items: center;
+    min-height: 90vh;
+    padding-bottom: var(--espacement-lg);
+    display: flex;
+    
+    padding-top: 6rem;
+}
+/* titre hero tres grand et expressif */
+.section-hero h1 {
+    letter-spacing: -1px;
+    font-size: clamp(2.2rem,5vw,4rem);
+    font-weight: 800;
+    line-height: 1.1;
+
+}
+/* mot en couleur cyan dans le titre  */
+.section-hero h1 span {
+    color: var(--color-accent);
+
+}
+/* sous-titrehero */
+.section-hero h2 {
+line-height: 1.7;
+color: var(--text-muted);
+
+font-weight: 400;
+    font-size: 1.1rem;
+font-family: var(--text-muted);
+}
+/* image hero legerement incline pour l'asymetrie */
+.section-hero img {
+
+    border: 2px solid rgba(0, 194, 203, 0.2);
+    border-radius: var(--rayon-carte);
+}
+/* bloc statistique sous le hero  */
+.bloc-stats {
+    margin-bottom: var(--espacement-md);
+    border-top: 1px solid rgba(0, 194, 203, 0.15);
+    padding-top: var(--espacement-md);
+}
+.bloc-stats h3 {
+    color: var(--color-accent);
+    font-family: var(--police-titre);
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+.bloc-stats p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+/* bento grid - section (comment ça marche ) */
+/*  tout les cartes nont pas la meme taille*/
+/* on utilise le css grid pour creeer la grille modulaire */
+.bento-grid {
+    gap: 1.2rem;
+    grid-template-columns: repeat(4,1fr);
+    display: grid;
+    grid-template-rows: auto auto;
+}
+/* grand prend 2 colonnes 2lignes */
 .bento-carte-1{
     
     grid-row: span 2;
     grid-column: span 2;
 }
+/* normal 1 colonne */
 .bento-carte-2 {
     grid-column: span 1;
 }
+/* normal , 1 colonne */
 .bento-carte-3 {
     grid-column: span 1;
 }
+/* large prend 2 colonnes */
 .bento-carte-4 {
 grid-column: span 2;
 }
+/* style commun des cartes bento */
 .bento-grid .card {
     height: 100%;
     padding: var(--espacement-md);
-    padding: var(--transition);
+    transition: var(--transition);
 }
+/* numero detape dans la carte */
 .bento-grid .numero-etape {
     line-height: 1;
     font-family: var(--police-titre);
@@ -309,23 +647,35 @@ grid-column: span 2;
 color: var(--color-accent);
 font-weight: 800;
 }
+/* icone dans la carte bento */
 .bento-grid .icon-etape {
     margin-bottom: 0.5rem;
     font-weight: 700;
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
 }
+/* texte dans la carte bento */
 .bento-grid .card p {
     line-height: 1.6;
     font-size: 0.9rem;
     color: var(--text-muted);
 }
+/* titre dans la carte bento */
+.bento-grid .card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    color: var(--text-light);
+    font-weight: 700;
+}
+/* section categorie  */
+/* categorie categorie de base */
 .carte-categorie {
     cursor: pointer;
     padding: 2rem 1rem;
     text-align: center;
     transition: var(--transition);
 }
+/* icone categorie */
 .carte-categorie i {
     margin-bottom: 1rem;
     color: var(--text-muted);
@@ -333,17 +683,21 @@ font-weight: 800;
 font-size: 2.5rem;
 transition: var(--transition);
 }
+/* icone categprie */
 .carte-categorie h3 {
     margin-bottom: 0.4rem;
     font-size: 1rem;
     font-weight: 600;
     color: var(--text-light);
 }
+/* nombre de freelances */
 .carte-categorie p {
     margin: 0;
     font-size: 0.85rem;
     color: var(--text-muted);
 }
+/* effet hover sur les cartes categories */
+/* la carte monte legerement et change de bordure */
 .carte-categorie:hover {
 box-shadow: 0 12px 30px rgba(0, 194, 203, 0.15);
     background-color: rgba(0, 194, 203, 0.05) !important;
@@ -351,14 +705,22 @@ box-shadow: 0 12px 30px rgba(0, 194, 203, 0.15);
     border-color: var(--color-accent) !important;
 
 }
+/* l'icone deviendra cyan au survol */
 .carte-categorie:hover i {
     color: var(--color-accent);
 }
+/* le titre devient cyan au survol */
+.carte-categorie:hover h3 {
+    color: var(--color-accent);
+}
+/* section temoignages carousel */
+/* style du carousel et des cartes */
 .section-temoignages {
     border-bottom:1px solid rgba(0, 194, 203, 0.1) ;
     background-color: var(--bg-card);
     border-top: 1px solid rgba(0, 194, 203, 0.1);
 }
+/* nom du temoignant */
 .section-temoignages strong {
     margin-top: 0.5rem;
     font-family: var(--police-titre);
@@ -366,6 +728,7 @@ box-shadow: 0 12px 30px rgba(0, 194, 203, 0.15);
     color: var(--color-accent);
     font-size: 1rem;
 }
+/*citation du temoignant*/
 .section-temoignages .lead {
     max-width: 650px;
     line-height: 1.8;
@@ -375,19 +738,40 @@ box-shadow: 0 12px 30px rgba(0, 194, 203, 0.15);
 
     color: var(--text-light);
 }
+/* role du temoignant   */
+.section-temoignages .text-muted {
+    font-size: 0.85rem;
+    color: var(--text-muted) !important;
+}
+/* photo avatar arrondie avec bordure cyan */
 .section-temoignages img {
     object-fit: cover;
     border: 3px solid var(--color-accent);
 }
+.section-temoignages .bi-star-fill,
+.section-temoignages .bi-star {
+    object-fit: cover;
+    border: 3px solid var(--color-accent);
+}
+/* etoiles */
+.section-temoignages .bi-star-fill,
+.section-temoignages .bi-star {
+    margin: 0 1px;
+    font-size: 1rem;
+}
+/* section cta  */
+/* bandeau avec fond accent cyan */
 .section-cta {
     
     padding: var(--espacement-lg) 0;
-    background: linear-gradient(135deg,var(--color-accent)0%, #007A80 100%);
+    background: linear-gradient(135deg, var(--color-accent) 0%, #007A80 100%);
 }
 .section-cta h2 {
     font-size: clamp(1.5rem,3vw,2.5rem);
+    /* vw est une mesure de taille en CSS */
     color: var(--background-primary);
 }
+
 .section-cta p {
     opacity: 0.85;
     color: var(--background-primary);
@@ -405,18 +789,32 @@ box-shadow: 0 12px 30px rgba(0, 194, 203, 0.15);
     color: var(--color-accent) !important;
     background-color: var(--bg-card) !important;
 }
+
+
+
+
+
+
+
+/* mobile-max 576px */
+/* tout en une seul colone texte reduits */
+
 @media (max-width:576px) {
+    /* titre hero plus plus petit sur mobile */
     /* La règle @media en CSS permet d'appliquer des blocs de styles spécifiques uniquement si certaines conditions liées à l'appareil de l'utilisateur (taille d'écran, orientation, résolution) sont remplies. */
 .section-hero h1 {
     font-size: 1.8rem;
-
 }
+
+/* sous-titre hero */
 .section-hero h2 {
     font-size: 1rem;
 }
+/* les 2 bouton cta en colonne sur mobile */
 .section-hero .d-flex {
     flex-direction: column;
 }
+/* bento grid en une seule colonne sur mobile */
 .bento-grid{
     grid-template-columns: 1fr;
 }
@@ -427,34 +825,44 @@ box-shadow: 0 12px 30px rgba(0, 194, 203, 0.15);
     grid-row: span 1;
     grid-column: span 1;
 }
+/* statistique en colonnes sur mobi */
 .bloc-stats h3 {
     font-size: 1.8rem;
 }
+/* titre de section plus petits */
 h2 {
 
     font-size: 1.5rem;
 }
+/* carousel temoignages-padding reduit  */
 .section-temoignages .lead {
     padding: 0.1rem;
     font-size: 0.95rem;
 }
+/* cta titre plus petit  */
 .section-cta h2 {
     font-size: 1.4rem;
 }
+/*  */
 footer .d-flex {
     justify-content: center;
     /* justify-content: sert à aligner les éléments horizontalement dans un conteneur Flexbox ou Grid. */
 }
 
 }
+/* tablette -entre 577px et 768  */
+
 @media (min-width:577px) and (max-width:768px) {
+    /* titre hero taille intermediaire */
     .section-hero h1 {
         font-size: 2.2rem;
     }
+    /* bento grid en colonnes sur tablette */
 .bento-grid {
     grid-template-columns: repeat(2, 1fr);
 
 }
+
 .bento-carte-1 {
     grid-row: span 1;
     grid-column: span 2;
@@ -464,14 +872,17 @@ footer .d-flex {
     grid-column: span 2;
 }
 }
+/* titre hero taille moyenne */
 @media (min-width:768px) and (max-width:1199px) {
 .section-hero h1 {
     font-size: 2.8rem;
-}
+} 
+/* bento grid en colonne mais ajusté*/
 .bento-grid {
     grid-template-columns: repeat(4, 1fr);
 }
 }
+/* pc -1200px et plus tout s'affiche normalement*/
 @media (min-width: 1200px) {
     .section-hero h1 {
         font-size: 3.5rem;
@@ -481,7 +892,10 @@ footer .d-flex {
     /* grid-template-columns : Définit le nombre et la taille des colonnes du conteneur grid.repeat(4, ...) : Fonction qui évite de répéter la même valeur. Elle dit au navigateur de dupliquer 4 fois la configuration spécifiée.1fr : Signifie 1 fraction. C'est une unité de mesure propre au CSS Grid qui représente une part proportionnelle de l'espace libre restant dans le conteneur */
     }
 }
+/* navbar responsive */
+/* le menu hamburger s'adapte bien sur tous les ecrans */
 @media (max-width:991px) {
+/*menu collapse en fond sombre sur mobile  */
     .navbar-collapse {
         margin-top: 0.5rem;
         background-color: var(--background-primary);
@@ -489,23 +903,193 @@ footer .d-flex {
 border-radius: var(--rayon-carte);
 padding: 1rem;    
 }
+/* lien en colonne dans le menu mobile */
 .navbar-nav {
+  gap: 0.3rem;
+}
+.navbar .btn-info {
     margin-top: 0.5rem;
     width: 100%;
     text-align: center;
 }
 }
+/* formulaire contact responsive */
+/* les champs s'adaptent sur mobile */
 @media (max-width:576px) {
+    /* nom prenom en colonne sur mobile */
     .row .col-md-6 {
         width: 100%;
     }
+    /* ifram google maps plus petite sur mobile */
     iframe {
         height: 200px;
     }
 }
+/* freelance page responsive */
+/* grille des profils : 3 col pc -2 tablette -1mobile */
+/* ajustation des cartes */
 @media (max-width:576px) {
+    /* carte freelance pleine largeur sur mobile */
+    .card .rounded.circle {
+        height: 70px !important;
+        width: 70px !important;
+    }
     .bloc-stats h3,
     [data-target] {
         font-size: 2rem;
     }
 }
+@media ( max-width:576px) {
+    .bloc-stats h3,
+    [data-target] {
+        font-size: 2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* toggle mode sombre-bouton dans le navbar */
+/* genre de croissant soleil */
+.toggle-theme {
+    font-size: 1rem;
+    background: none;
+    transition: var(--transition);
+    border: 1px solid rgba(0, 194, 203, 0.4);
+    margin-right: 0.8rem;
+    color: var(--color-accent);
+    border-radius: 50px;
+    cursor: pointer;
+    width: 38px;
+    justify-content: center;
+    height: 38px;
+    align-items: center;
+    display: flex;
+}
+.toggle-theme:hover {
+    border-color: var(--color-accent);
+    background-color: rgba(0, 194, 203, 0.15);
+
+}
+
+/*  MODE CLAIR
+   Toutes les couleurs s'inversent quand on active le mode clair */
+body.mode-clair  {
+color:#0A2540; 
+background-color:#F0F4F8 ;
+}
+body.mode-clair .navbar {
+    border-bottom: 1px solid #e0e0e0 ;
+    background-color: #ffffff !important ;
+}
+body.mode-clair .navbar-brand {
+color: var(--color-accent) !important;
+}
+body.mode-clair .navbar .nav-link {
+    color: #0A2540 !important ;
+}
+body.mode-clair .navbar .nav-link:hover,
+body.mode-clair .navbar .nav-link.active {
+    color: var(--color-accent) !important;
+}
+body.mode-clair .card {
+    color: #0A2540 !important;
+    background-color: #ffffff !important;
+    border-color:  #e0e0e0 !important;
+
+}
+body.mode-clair .card h3,
+body.mode-clair .card h2,
+body.mode-clair h1,
+body.mode-clair h2,
+body.mode-clair h3 {
+    color: #0A2540;
+}
+body.mode-clair .text-muted {
+    color:#556677 !important ;
+}
+body.mode-clair .section-temoignages {
+    background-color:#e8eef5 ;
+}
+body.mode-clair footer {
+    background-color: #0A2540;
+}
+body.mode-clair .accordion-item {
+    background-color: #ffffff !important;
+}
+body.mode-clair .accordion-button {
+    color: #0A2540 !important;
+    background-color: #ffffff !important;
+}
+body.mode-clair .accordion-body {
+    color: #556677 !important;
+    background-color: #ffffff !important;
+
+}
+body.mode-clair .form-control,
+body.mode-clair .form-select {
+    background-color: #ffffff !important;
+    border-color: #c0c0c0 !important;
+    color: #0A2540 !important;
+}
+body.mode-clair .navbar-collapse {
+    background-color: #ffffff;
+}
+    /* navbar scroll */
+/* le style s'applique quand on scrolle vers le bas   */
+/*   Effet shrink : fond plus opaque + ombre */
+.navbar-scrolled {
+    padding: 0.4rem 0 !important;
+    background-color: rgba(5, 13, 24, 0.97) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+body.mode-clair .navbar-scrolled {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.97) !important;
+}
+/* bouton dretour en haut */
+/* cache parde faut apparait au scroll */
+/* fixer en bas a droite */
+.bouton-retour-haut {
+   
+    transition: var(--transition);
+    position: fixed;
+    bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 194, 203, 0.4);
+    justify-content: center;
+    right: 2rem;
+    height: 45px;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: var(--color-accent);
+    color: var(--background-primary);
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    width: 45px;
+
+/* caché par defaut */
+opacity: 0;
+z-index: 999;
+pointer-events: none;
+transform: translateY(20px);
+}
+
+/* dina visible  quand on ajoutera le js */
+.bouton-retour-haut.visible {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+}
+.bouton-retour-haut:hover {
+    transform: translateY(-3px);
+    background-color: var(--text-light);
+}
+
