@@ -1093,3 +1093,19 @@ transform: translateY(20px);
     background-color: var(--text-light);
 }
 
+
+
+
+
+/* les sections partent invisibles et apparaissent en fondu */
+/* etat initial  ssection invisible et legerement decalee vers le bas  */
+.fade-int {
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    opacity: 0;
+    transform: translateY(30px);
+}
+/* etat final-section visible et a sa position normal */
+.fade-visible {
+    transform: translateY(0);
+    opacity: 1;
+}
