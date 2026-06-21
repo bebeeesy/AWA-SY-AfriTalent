@@ -116,7 +116,7 @@ function animerCompteur(element) {
 
   
     // on calcule le temps ecoule depuis le debut 
-    const tempsEcoule = tempsActuel - debut;
+    const tempsEcoule = tempsActuel - debut;zzzyy
     // on calcule la progression entre 0 et 1
     const progression = Math.min(tempsEcoule / duree, 1);
     // on calcule la valeur actuelle
@@ -190,3 +190,132 @@ threshold:0.1
 sectionAnimees.forEach(function(section){
     observateurSections.observe(section);
 });
+
+
+const boutonsFiltres = document.querySelectorAll('[data-categorie]');
+
+if (boutonsFiltres.length > 0) {
+
+    
+    const cartesFreelances = document.querySelectorAll('.col-12[data-categorie]');
+
+    function filtrerParCategorie(categorie) {
+        cartesFreelances.forEach(function (carte) {
+            const categorieCarte = carte.getAttribute('data-categorie');
+
+            if (categorie === 'tous' || categorieCarte === categorie) {
+                carte.style.display = '';
+            } else {
+                carte.style.display = 'none';
+            }
+        });
+    }
+
+    function mettreAJourBoutonsFiltre(boutonClique) {
+        boutonsFiltres.forEach(function (bouton) {
+            bouton.classList.remove('btn-info', 'text-dark');
+            bouton.classList.add('btn-outline-secondary');
+        });
+        boutonClique.classList.remove('btn-outline-secondary');
+        boutonClique.classList.add('btn-info', 'text-dark');
+    }
+
+    boutonsFiltres.forEach(function (bouton) {
+        bouton.addEventListener('click', function () {
+            const categorieChoisie = bouton.getAttribute('data-categorie');
+            filtrerParCategorie(categorieChoisie);
+            mettreAJourBoutonsFiltre(bouton);
+        });
+    });
+}
+
+
+
+const formulaireContact = document.querySelector('form[aria-label="formulaire de contact AfriTalent"]');
+
+if (formulaireContact) {
+
+    const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    function afficherErreur(champ, message) {
+        champ.classList.add('is-invalid');
+        const divErreur = champ.nextElementSibling;
+        if (divErreur) {
+            divErreur.textContent = message;
+        }
+    }
+
+    function retirerErreur(champ) {
+        champ.classList.remove('is-invalid');
+    }
+
+    function validerFormulaire() {
+
+        let estValide = true;
+
+       
+        const champNom = formulaireContact.querySelector('[name="nom"]');
+        if (champNom.value.trim() === '') {
+            afficherErreur(champNom, 'Ce champ est obligatoire.');
+            estValide = false;
+        } else {
+            retirerErreur(champNom);
+        }
+
+        const champPrenom = formulaireContact.querySelector('[name="prenom"]');
+        if (champPrenom.value.trim() === '') {
+            afficherErreur(champPrenom, 'Ce champ est obligatoire.');
+            estValide = false;
+        } else {
+            retirerErreur(champPrenom);
+        }
+
+        const champEmail = formulaireContact.querySelector('[name="email"]');
+        if (champEmail.value.trim() === '') {
+            afficherErreur(champEmail, 'Ce champ est obligatoire.');
+            estValide = false;
+        } else if (!regexEmail.test(champEmail.value.trim())) {
+            // le texte tape ne correspond pas au format email
+            afficherErreur(champEmail, 'Entrez une adresse email valide.');
+            estValide = false;
+        } else {
+            retirerErreur(champEmail);
+        }
+
+        const champSujet = formulaireContact.querySelector('[name="sujet"]');
+        if (champSujet.value === '') {
+            afficherErreur(champSujet, 'Veuillez choisir un sujet.');
+            estValide = false;
+        } else {
+            retirerErreur(champSujet);
+        }
+
+        const champMessage = formulaireContact.querySelector('[name="message"]');
+        if (champMessage.value.trim() === '') {
+            afficherErreur(champMessage, 'Ce champ est obligatoire.');
+            estValide = false;
+        } else if (champMessage.value.trim().length < 20) {
+            afficherErreur(champMessage, 'Le message doit faire au moins 20 caractères.');
+            estValide = false;
+        } else {
+            retirerErreur(champMessage);
+        }
+
+        return estValide;
+    }
+
+    formulaireContact.addEventListener('submit', function (evenement) {
+        evenement.preventDefault();
+
+        const formulaireEstValide = validerFormulaire();
+
+        if (formulaireEstValide) {
+            const messageSucces = formulaireContact.querySelector('.alert');
+            if (messageSucces) {
+                messageSucces.classList.remove('d-none');
+            }
+
+            formulaireContact.reset();
+        }
+    });
+}
