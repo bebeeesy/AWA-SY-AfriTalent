@@ -13,423 +13,573 @@
 
 <body>
 
-
-    <!--
-         barre de navigation
-    -->
+    <!-- ============================================================
+    BARRE DE NAVIGATION
+    ============================================================ -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-           <!-- navbar : La base de Bootstrap pour créer une barre de navigation.navbar-expand-lg : C'est la classe magique pour le mobile. Elle cache les liens derrière un menu "hamburger" sur les petits écrans et les affiche normalement sur les grands écrans (ordinateurs).navbar-dark bg-dark : Donne un look sombre (fond noir et texte blanc). C'est très élégant et cohérent avec le reste de votre design pour AfriTalent.fixed-top : C'est une option cruciale. Elle bloque la barre en haut de l'écran. Même quand l'utilisateur descend dans la page (scroll), le menu reste visible pour lui permettre de naviguer facilement. -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
             <div class="container">
-
                 <a class="navbar-brand fw-bold fs-4" href="index.html">
                     <img src="images/logo.png" alt="logo AfriTalent" width="38" height="38" class="me-2">
                     AfriTalent
                 </a>
-
-                <button
-                    class="navbar-toggler"
-
-
-
-
-
-                     
-                    type="button"
-                    data-bs-toggle="collapse"
-                  
-aria-controls="menu-nav"
- aria-label="ouvrir le menu"
-                    aria-expanded="false"
-                    
-                   >
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Ouvrir le menu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-                <div class="collapse navbar-collapse" id="menu-nav">
+                <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto me-3">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="freelance.html">Freelances</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="tarif.html">Tarifs</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">À propos</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="freelance.html">Freelances</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tarif.html">Tarifs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
                     <a href="contact.html" class="btn btn-info text-dark fw-bold">Rejoindre AfriTalent</a>
                 </div>
-
             </div>
         </nav>
     </header>
 
-
+    <!-- ============================================================
+    CONTENU PRINCIPAL
+    ============================================================ -->
     <main class="mt-5 pt-4">
 
-
-        <!--
-             EN-TETE PAGE-->
+        <!-- EN-TÊTE -->
         <section aria-label="titre de la page freelances">
             <div class="container py-4">
-                <h1 class="fw-bold">Nos freelances</h1>
-                <p class="text-muted lead">
+                <h1 class="fw-bold" style="color: var(--couleur-texte);">Nos freelances</h1>
+                <p class="lead" style="color: var(--couleur-muted);">
                     Trouvez le talent qu'il vous faut parmi nos profils vérifiés et notés par la communauté.
                 </p>
             </div>
         </section>
 
- 
-        <!--
-             BARRE DE FILTREeeeeeeeeeeeeeeeeee-->
+        <!-- FILTRES -->
         <section aria-label="filtrer par catégorie">
             <div class="container pb-4">
                 <div class="d-flex flex-wrap gap-2">
-
-                    <button class="btn btn-info text-dark" type="button" data-categorie="tous">
-                        Tous
-                    </button>
-                    <button class="btn btn-outline-secondary" type="button" data-categorie="dev-web">
-                        Développement Web
-                    </button>
-                    <button class="btn btn-outline-secondary" type="button" data-categorie="design">
-                        Design UI/UX
-                    </button>
-                    <button class="btn btn-outline-secondary" type="button" data-categorie="marketing">
-                        Marketing Digital
-                    </button>
-                    <button class="btn btn-outline-secondary" type="button" data-categorie="data-ia">
-                        Data &amp; IA
-                    </button>
-                    <button class="btn btn-outline-secondary" type="button" data-categorie="redaction">
-                        Rédaction Tech
-                    </button>
-                    <button class="btn btn-outline-secondary" type="button" data-categorie="devops">
-                        DevOps &amp; Cloud
-                    </button>
-
+                    <button class="btn btn-info text-dark" type="button" data-categorie="tous">Tous</button>
+                    <button class="btn btn-outline-secondary" type="button" data-categorie="dev-web">Développement Web</button>
+                    <button class="btn btn-outline-secondary" type="button" data-categorie="design">Design UI/UX</button>
+                    <button class="btn btn-outline-secondary" type="button" data-categorie="marketing">Marketing Digital</button>
+                    <button class="btn btn-outline-secondary" type="button" data-categorie="data-ia">Data &amp; IA</button>
+                    <button class="btn btn-outline-secondary" type="button" data-categorie="redaction">Rédaction Tech</button>
+                    <button class="btn btn-outline-secondary" type="button" data-categorie="devops">DevOps &amp; Cloud</button>
                 </div>
             </div>
         </section>
 
-
-        <!--
-             GRILLE FREELANCES
-           les  9 profils 
-        -->
+        <!-- GRILLE DES 9 FREELANCES -->
         <section aria-label="liste des freelances disponibles">
             <div class="container py-4">
                 <div class="row g-4">
-
 
                     <!-- Freelance 1 -->
                     <div class="col-12 col-md-6 col-lg-4" data-categorie="dev-web">
                         <div class="card h-100 bg-dark text-white border-0">
                             <div class="card-body text-center p-4">
                                 <img src="images/freelance1.png" alt="photo de Ibou Sarr" class="rounded-circle mb-3" width="80" height="80">
-         <h2 class="card-title h5">Ibou Sarr</h2>
+                                <h2 class="card-title h5" style="color: var(--couleur-texte);">Ibou Sarr</h2>
                                 <p class="text-info fw-semibold small">Développement Web</p>
-                <p class="card-text text-muted small">
+                                <p class="card-text small" style="color: var(--couleur-muted);">
                                     Développeur full-stack Node.js et Vue.js, 4 ans d'expérience en startups sénégalaises.
                                 </p>
-                                <p class="fw-bold mb-2">28 000 XOF / heure</p>
-                 <div class="mb-3" aria-label="note 5 sur 5">
+                                <p class="fw-bold mb-2" style="color: var(--couleur-texte);">28 000 XOF / heure</p>
+                                <div class="mb-3" role="img" aria-label="note 5 sur 5">
                                     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
-       <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                 </div>
-                                <a href="#" class="btn btn-outline-info btn-sm">Voir le profil</a>
+                                <button class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#modalIbou">
+                                    Voir le profil
+                                </button>
                             </div>
                         </div>
                     </div>
-
 
                     <!-- Freelance 2 -->
                     <div class="col-12 col-md-6 col-lg-4" data-categorie="design">
                         <div class="card h-100 bg-dark text-white border-0">
                             <div class="card-body text-center p-4">
                                 <img src="images/freelance2.png" alt="photo de Aïcha Mbaye" class="rounded-circle mb-3" width="80" height="80">
-                                <h2 class="card-title h5">Aïcha Mbaye</h2>
+                                <h2 class="card-title h5" style="color: var(--couleur-texte);">Aïcha Mbaye</h2>
                                 <p class="text-info fw-semibold small">Design UI/UX</p>
-  <p class="card-text text-muted small">
+                                <p class="card-text small" style="color: var(--couleur-muted);">
                                     Designer produit spécialisée Figma, créatrice d'interfaces pour applications mobiles africaines.
                                 </p>
-                                <p class="fw-bold mb-2">22 000 XOF / heure</p>
-                                <div class="mb-3" aria-label="note 5 sur 5">
+                                <p class="fw-bold mb-2" style="color: var(--couleur-texte);">22 000 XOF / heure</p>
+                                <div class="mb-3" role="img" aria-label="note 5 sur 5">
                                     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
-             <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                 </div>
-                                <a href="#" class="btn btn-outline-info btn-sm">Voir le profil</a>
+                                <button class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#modalAicha">
+                                    Voir le profil
+                                </button>
                             </div>
                         </div>
                     </div>
-
 
                     <!-- Freelance 3 -->
                     <div class="col-12 col-md-6 col-lg-4" data-categorie="marketing">
                         <div class="card h-100 bg-dark text-white border-0">
                             <div class="card-body text-center p-4">
-              <img src="images/freelance3.png" alt="photo de Cheikh Gueye" class="rounded-circle mb-3" width="80" height="80">
-                                <h2 class="card-title h5">Cheikh Gueye</h2>
+                                <img src="images/freelance3.png" alt="photo de Cheikh Gueye" class="rounded-circle mb-3" width="80" height="80">
+                                <h2 class="card-title h5" style="color: var(--couleur-texte);">Cheikh Gueye</h2>
                                 <p class="text-info fw-semibold small">Marketing Digital</p>
-         <p class="card-text text-muted small">
+                                <p class="card-text small" style="color: var(--couleur-muted);">
                                     Expert SEO et campagnes Meta Ads, spécialisé dans la croissance de startups africaines.
                                 </p>
-                                <p class="fw-bold mb-2">18 000 XOF / heure</p>
-                                <div class="mb-3" aria-label="note 4 sur 5">
+                                <p class="fw-bold mb-2" style="color: var(--couleur-texte);">18 000 XOF / heure</p>
+                                <div class="mb-3" role="img" aria-label="note 4 sur 5">
                                     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
-         <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                     <i class="bi bi-star text-warning" aria-hidden="true"></i>
                                 </div>
-                <a href="#" class="btn btn-outline-info btn-sm">Voir le profil</a>
+                                <button class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#modalCheikh">
+                                    Voir le profil
+                                </button>
                             </div>
                         </div>
                     </div>
-
 
                     <!-- Freelance 4 -->
                     <div class="col-12 col-md-6 col-lg-4" data-categorie="data-ia">
                         <div class="card h-100 bg-dark text-white border-0">
                             <div class="card-body text-center p-4">
                                 <img src="images/freelance4.png" alt="photo de Rokhaya Diallo" class="rounded-circle mb-3" width="80" height="80">
-        <h2 class="card-title h5">Rokhaya Diallo</h2>
+                                <h2 class="card-title h5" style="color: var(--couleur-texte);">Rokhaya Diallo</h2>
                                 <p class="text-info fw-semibold small">Data &amp; IA</p>
-                                <p class="card-text text-muted small">
+                                <p class="card-text small" style="color: var(--couleur-muted);">
                                     Data scientist Python et TensorFlow, spécialisée dans les modèles de prédiction pour le commerce africain.
-           </p>
-                                <p class="fw-bold mb-2">38 000 XOF / heure</p>
-                                <div class="mb-3" aria-label="note 5 sur 5">
-                <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                </p>
+                                <p class="fw-bold mb-2" style="color: var(--couleur-texte);">38 000 XOF / heure</p>
+                                <div class="mb-3" role="img" aria-label="note 5 sur 5">
                                     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
-      <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                 </div>
-                                <a href="#" class="btn btn-outline-info btn-sm">Voir le profil</a>
+                                <button class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#modalRokhaya">
+                                    Voir le profil
+                                </button>
                             </div>
                         </div>
                     </div>
-
 
                     <!-- Freelance 5 -->
                     <div class="col-12 col-md-6 col-lg-4" data-categorie="redaction">
                         <div class="card h-100 bg-dark text-white border-0">
-                <div class="card-body text-center p-4">
+                            <div class="card-body text-center p-4">
                                 <img src="images/freelance5.png" alt="photo de Omar Niang" class="rounded-circle mb-3" width="80" height="80">
-                                <h2 class="card-title h5">Omar Niang</h2>
-<p class="text-info fw-semibold small">Rédaction Tech</p>
-                                <p class="card-text text-muted small">
+                                <h2 class="card-title h5" style="color: var(--couleur-texte);">Omar Niang</h2>
+                                <p class="text-info fw-semibold small">Rédaction Tech</p>
+                                <p class="card-text small" style="color: var(--couleur-muted);">
                                     Rédacteur technique bilingue français-anglais, expert en documentation API et contenus SaaS.
-                </p>
-                                <p class="fw-bold mb-2">15 000 XOF / heure</p>
-                                <div class="mb-3" aria-label="note 4 sur 5">
+                                </p>
+                                <p class="fw-bold mb-2" style="color: var(--couleur-texte);">15 000 XOF / heure</p>
+                                <div class="mb-3" role="img" aria-label="note 4 sur 5">
                                     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
-  <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
-         <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                     <i class="bi bi-star text-warning" aria-hidden="true"></i>
                                 </div>
-                                <a href="#" class="btn btn-outline-info btn-sm">Voir le profil</a>
+                                <button class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#modalOmar">
+                                    Voir le profil
+                                </button>
                             </div>
                         </div>
                     </div>
-
 
                     <!-- Freelance 6 -->
                     <div class="col-12 col-md-6 col-lg-4" data-categorie="devops">
                         <div class="card h-100 bg-dark text-white border-0">
                             <div class="card-body text-center p-4">
                                 <img src="images/freelance6.png" alt="photo de Moussa Kouyaté" class="rounded-circle mb-3" width="80" height="80">
-        <h2 class="card-title h5">Moussa Kouyaté</h2>
+                                <h2 class="card-title h5" style="color: var(--couleur-texte);">Moussa Kouyaté</h2>
                                 <p class="text-info fw-semibold small">DevOps &amp; Cloud</p>
-                                <p class="card-text text-muted small">
+                                <p class="card-text small" style="color: var(--couleur-muted);">
                                     Ingénieur DevOps certifié AWS et GCP, spécialisé en pipelines CI/CD et infrastructure as code.
-         </p>
-                                <p class="fw-bold mb-2">32 000 XOF / heure</p>
-                                <div class="mb-3" aria-label="note 5 sur 5">
+                                </p>
+                                <p class="fw-bold mb-2" style="color: var(--couleur-texte);">32 000 XOF / heure</p>
+                                <div class="mb-3" role="img" aria-label="note 5 sur 5">
                                     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
-<i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                 </div>
-                                <a href="#" class="btn btn-outline-info btn-sm">Voir le profil</a>
+                                <button class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#modalMoussa">
+                                    Voir le profil
+                                </button>
                             </div>
                         </div>
                     </div>
-
 
                     <!-- Freelance 7 -->
                     <div class="col-12 col-md-6 col-lg-4" data-categorie="dev-web">
                         <div class="card h-100 bg-dark text-white border-0">
                             <div class="card-body text-center p-4">
                                 <img src="images/freelance7.png" alt="photo de Fatou Camara" class="rounded-circle mb-3" width="80" height="80">
-           <h2 class="card-title h5">Fatou Camara</h2>
+                                <h2 class="card-title h5" style="color: var(--couleur-texte);">Fatou Camara</h2>
                                 <p class="text-info fw-semibold small">Développement Web</p>
-                                <p class="card-text text-muted small">
+                                <p class="card-text small" style="color: var(--couleur-muted);">
                                     Développeuse back-end Django et PostgreSQL, passionnée par la performance et la sécurité web.
-           </p>
-                                <p class="fw-bold mb-2">25 000 XOF / heure</p>
-                                <div class="mb-3" aria-label="note 5 sur 5">
+                                </p>
+                                <p class="fw-bold mb-2" style="color: var(--couleur-texte);">25 000 XOF / heure</p>
+                                <div class="mb-3" role="img" aria-label="note 5 sur 5">
                                     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
-                <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                 </div>
-                                <a href="#" class="btn btn-outline-info btn-sm">Voir le profil</a>
+                                <button class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#modalFatou">
+                                    Voir le profil
+                                </button>
                             </div>
                         </div>
                     </div>
-
 
                     <!-- Freelance 8 -->
                     <div class="col-12 col-md-6 col-lg-4" data-categorie="design">
                         <div class="card h-100 bg-dark text-white border-0">
                             <div class="card-body text-center p-4">
                                 <img src="images/freelance8.png" alt="photo de Yaya Touré" class="rounded-circle mb-3" width="80" height="80">
-                                <h2 class="card-title h5">Yaya Touré</h2>
+                                <h2 class="card-title h5" style="color: var(--couleur-texte);">Yaya Touré</h2>
                                 <p class="text-info fw-semibold small">Design UI/UX</p>
-                                <p class="card-text text-muted small">
-                       Motion designer et illustrateur numérique, créateur de brand identities pour entreprises ivoiriennes.
+                                <p class="card-text small" style="color: var(--couleur-muted);">
+                                    Motion designer et illustrateur numérique, créateur de brand identities pour entreprises ivoiriennes.
                                 </p>
-                                <p class="fw-bold mb-2">26 000 XOF / heure</p>
-                                <div class="mb-3" aria-label="note 4 sur 5">
-          <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                <p class="fw-bold mb-2" style="color: var(--couleur-texte);">26 000 XOF / heure</p>
+                                <div class="mb-3" role="img" aria-label="note 4 sur 5">
                                     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
-                <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                     <i class="bi bi-star text-warning" aria-hidden="true"></i>
                                 </div>
-                                <a href="#" class="btn btn-outline-info btn-sm">Voir le profil</a>
+                                <button class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#modalYaya">
+                                    Voir le profil
+                                </button>
                             </div>
                         </div>
                     </div>
-
 
                     <!-- Freelance 9 -->
                     <div class="col-12 col-md-6 col-lg-4" data-categorie="data-ia">
                         <div class="card h-100 bg-dark text-white border-0">
                             <div class="card-body text-center p-4">
-                  <img src="images/freelance9.png" alt="photo de Binta Sow" class="rounded-circle mb-3" width="80" height="80">
-                                <h2 class="card-title h5">Binta Sow</h2>
-          <p class="text-info fw-semibold small">Data &amp; IA</p>
-          <!-- &amp; est une entité HTML utilisée pour afficher le symbole de l'esperluette (&) sur une page web. -->
-                                <p class="card-text text-muted small">
-                Analyste BI et experte Power BI, spécialisée en tableaux de bord pour PME africaines.
+                                <img src="images/freelance9.png" alt="photo de Binta Sow" class="rounded-circle mb-3" width="80" height="80">
+                                <h2 class="card-title h5" style="color: var(--couleur-texte);">Binta Sow</h2>
+                                <p class="text-info fw-semibold small">Data &amp; IA</p>
+                                <p class="card-text small" style="color: var(--couleur-muted);">
+                                    Analyste BI et experte Power BI, spécialisée en tableaux de bord pour PME africaines.
                                 </p>
-              <p class="fw-bold mb-2">29 000 XOF / heure</p>
-                                <div class="mb-3" aria-label="note 5 sur 5">
-                                    <!-- class="mb-3" : (Margin Bottom 3) Ajoute un petit espace en bas (environ 16px) pour que la note ne colle pas au texte qui suit.aria-label="note 5 sur 5" : C'est la partie cruciale pour l'accessibilité. Si vous affichez 5 icônes d'étoiles, un malvoyant ne peut pas les "voir". Grâce à ce label, son lecteur d'écran lui dira directement : "Note 5 sur 5". -->
-     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                <p class="fw-bold mb-2" style="color: var(--couleur-texte);">29 000 XOF / heure</p>
+                                <div class="mb-3" role="img" aria-label="note 5 sur 5">
+                                    <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                     <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                                 </div>
-                                <a href="#" class="btn btn-outline-info btn-sm">Voir le profil</a>
+                                <button class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#modalBinta">
+                                    Voir le profil
+                                </button>
                             </div>
                         </div>
                     </div>
 
-
                 </div>
             </div>
         </section>
-<!-- Bouton retour en haut -->
-<button class="bouton-retour-haut" aria-label="retourner en haut de la page">
-    <i class="bi bi-arrow-up" aria-hidden="true"></i>
-</button>
+
+        <button class="bouton-retour-haut" aria-label="retourner en haut de la page">
+            <i class="bi bi-arrow-up"></i>
+        </button>
 
     </main>
 
+    <!-- ============================================================
+    MODALES - 9 PROFILS
+    ============================================================ -->
 
-    <!--FOOTER
- -->
+    <!-- Modal Ibou Sarr -->
+    <div class="modal fade" id="modalIbou" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-secondary">
+                    <h3 class="modal-title fs-5 text-white">Ibou Sarr</h3>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="images/freelance1.png" alt="Ibou Sarr" class="rounded-circle mb-3" width="100" height="100">
+                    <p><strong>Spécialité :</strong> Développement Web</p>
+                    <p><strong>Tarif :</strong> 28 000 XOF / heure</p>
+                    <p><strong>Note :</strong> ⭐⭐⭐⭐⭐</p>
+                    <p class="text-muted">Développeur full-stack Node.js et Vue.js, 4 ans d'expérience en startups sénégalaises.</p>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    <a href="contact.html" class="btn btn-info text-dark">Contacter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Aïcha Mbaye -->
+    <div class="modal fade" id="modalAicha" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-secondary">
+                    <h3 class="modal-title fs-5 text-white">Aïcha Mbaye</h3>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="images/freelance2.png" alt="Aïcha Mbaye" class="rounded-circle mb-3" width="100" height="100">
+                    <p><strong>Spécialité :</strong> Design UI/UX</p>
+                    <p><strong>Tarif :</strong> 22 000 XOF / heure</p>
+                    <p><strong>Note :</strong> ⭐⭐⭐⭐⭐</p>
+                    <p class="text-muted">Designer produit spécialisée Figma, créatrice d'interfaces pour applications mobiles africaines.</p>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    <a href="contact.html" class="btn btn-info text-dark">Contacter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Cheikh Gueye -->
+    <div class="modal fade" id="modalCheikh" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-secondary">
+                    <h3 class="modal-title fs-5 text-white">Cheikh Gueye</h3>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="images/freelance3.png" alt="Cheikh Gueye" class="rounded-circle mb-3" width="100" height="100">
+                    <p><strong>Spécialité :</strong> Marketing Digital</p>
+                    <p><strong>Tarif :</strong> 18 000 XOF / heure</p>
+                    <p><strong>Note :</strong> ⭐⭐⭐⭐</p>
+                    <p class="text-muted">Expert SEO et campagnes Meta Ads, spécialisé dans la croissance de startups africaines.</p>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    <a href="contact.html" class="btn btn-info text-dark">Contacter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Rokhaya Diallo -->
+    <div class="modal fade" id="modalRokhaya" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-secondary">
+                    <h3 class="modal-title fs-5 text-white">Rokhaya Diallo</h3>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="images/freelance4.png" alt="Rokhaya Diallo" class="rounded-circle mb-3" width="100" height="100">
+                    <p><strong>Spécialité :</strong> Data &amp; IA</p>
+                    <p><strong>Tarif :</strong> 38 000 XOF / heure</p>
+                    <p><strong>Note :</strong> ⭐⭐⭐⭐⭐</p>
+                    <p class="text-muted">Data scientist Python et TensorFlow, spécialisée dans les modèles de prédiction pour le commerce africain.</p>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    <a href="contact.html" class="btn btn-info text-dark">Contacter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Omar Niang -->
+    <div class="modal fade" id="modalOmar" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-secondary">
+                    <h3 class="modal-title fs-5 text-white">Omar Niang</h3>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="images/freelance5.png" alt="Omar Niang" class="rounded-circle mb-3" width="100" height="100">
+                    <p><strong>Spécialité :</strong> Rédaction Tech</p>
+                    <p><strong>Tarif :</strong> 15 000 XOF / heure</p>
+                    <p><strong>Note :</strong> ⭐⭐⭐⭐</p>
+                    <p class="text-muted">Rédacteur technique bilingue français-anglais, expert en documentation API et contenus SaaS.</p>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    <a href="contact.html" class="btn btn-info text-dark">Contacter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Moussa Kouyaté -->
+    <div class="modal fade" id="modalMoussa" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-secondary">
+                    <h3 class="modal-title fs-5 text-white">Moussa Kouyaté</h3>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="images/freelance6.png" alt="Moussa Kouyaté" class="rounded-circle mb-3" width="100" height="100">
+                    <p><strong>Spécialité :</strong> DevOps &amp; Cloud</p>
+                    <p><strong>Tarif :</strong> 32 000 XOF / heure</p>
+                    <p><strong>Note :</strong> ⭐⭐⭐⭐⭐</p>
+                    <p class="text-muted">Ingénieur DevOps certifié AWS et GCP, spécialisé en pipelines CI/CD et infrastructure as code.</p>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    <a href="contact.html" class="btn btn-info text-dark">Contacter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Fatou Camara -->
+    <div class="modal fade" id="modalFatou" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-secondary">
+                    <h3 class="modal-title fs-5 text-white">Fatou Camara</h3>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="images/freelance7.png" alt="Fatou Camara" class="rounded-circle mb-3" width="100" height="100">
+                    <p><strong>Spécialité :</strong> Développement Web</p>
+                    <p><strong>Tarif :</strong> 25 000 XOF / heure</p>
+                    <p><strong>Note :</strong> ⭐⭐⭐⭐⭐</p>
+                    <p class="text-muted">Développeuse back-end Django et PostgreSQL, passionnée par la performance et la sécurité web.</p>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    <a href="contact.html" class="btn btn-info text-dark">Contacter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Yaya Touré -->
+    <div class="modal fade" id="modalYaya" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-secondary">
+                    <h3 class="modal-title fs-5 text-white">Yaya Touré</h3>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="images/freelance8.png" alt="Yaya Touré" class="rounded-circle mb-3" width="100" height="100">
+                    <p><strong>Spécialité :</strong> Design UI/UX</p>
+                    <p><strong>Tarif :</strong> 26 000 XOF / heure</p>
+                    <p><strong>Note :</strong> ⭐⭐⭐⭐</p>
+                    <p class="text-muted">Motion designer et illustrateur numérique, créateur de brand identities pour entreprises ivoiriennes.</p>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    <a href="contact.html" class="btn btn-info text-dark">Contacter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Binta Sow -->
+    <div class="modal fade" id="modalBinta" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-secondary">
+                    <h3 class="modal-title fs-5 text-white">Binta Sow</h3>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="images/freelance9.png" alt="Binta Sow" class="rounded-circle mb-3" width="100" height="100">
+                    <p><strong>Spécialité :</strong> Data &amp; IA</p>
+                    <p><strong>Tarif :</strong> 29 000 XOF / heure</p>
+                    <p><strong>Note :</strong> ⭐⭐⭐⭐⭐</p>
+                    <p class="text-muted">Analyste BI et experte Power BI, spécialisée en tableaux de bord pour PME africaines.</p>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    <a href="contact.html" class="btn btn-info text-dark">Contacter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
     <footer>
         <div class="bg-dark text-light py-5 border-top border-secondary">
             <div class="container">
                 <div class="row g-4">
-
                     <div class="col-md-6 col-lg-3">
-                        <!-- col-lg-3 (Ordinateur) : Divise la largeur par 4 (12 / 3 = 4). Vos éléments sont alignés sur une seule ligne.col-md-6 (Tablette) : Divise la largeur par 2 (12 / 6 = 2). Les éléments se rangent sur deux lignes. -->
-                        <h4 class="fw-bold">AfriTalent</h4>
-                        <p class="text-muted">
-                            La plateforme qui connecte les freelances tech africains
-                            aux entreprises qui innovent sur le continent et au-delà.
-                        </p>
+                        <h3 class="fw-bold fs-5" style="color: var(--couleur-texte);">AfriTalent</h3>
+                        <p style="color: var(--couleur-muted);">La plateforme qui connecte les freelances tech africains aux entreprises qui innovent sur le continent et au-delà.</p>
                         <div class="d-flex gap-3 mt-3">
-                            <!-- d-flex (Display Flex) : C'est la commande magique pour aligner des éléments les uns à côté des autres (horizontalement) au lieu qu'ils s'empilent verticalement.gap-3 : Elle crée un espace automatique et régulier entre chaque élément (environ 16px). Cela évite que vos icônes ne se touchent.mt-3 (Margin Top 3) : Ajoute un petit espace au-dessus du groupe (environ 16px) pour le détacher du texte qui se trouve juste au-dessus. -->
-                            <a href="#" class="text-light" aria-label="page Facebook AfriTalent"><i class="bi bi-facebook fs-5" aria-hidden="true"></i></a>
-                            <a href="#" class="text-light" aria-label="page Twitter AfriTalent"><i class="bi bi-twitter-x fs-5" aria-hidden="true"></i></a>
-                            <a href="#" class="text-light" aria-label="page LinkedIn AfriTalent"><i class="bi bi-linkedin fs-5" aria-hidden="true"></i></a>
-                            <a href="#" class="text-light" aria-label="page Instagram AfriTalent"><i class="bi bi-instagram fs-5" aria-hidden="true"></i></a>
+                            <a href="#" class="text-light"><i class="bi bi-facebook fs-5"></i></a>
+                            <a href="#" class="text-light"><i class="bi bi-twitter-x fs-5"></i></a>
+                            <a href="#" class="text-light"><i class="bi bi-linkedin fs-5"></i></a>
+                            <a href="#" class="text-light"><i class="bi bi-instagram fs-5"></i></a>
                         </div>
                     </div>
-
                     <div class="col-md-6 col-lg-3">
-                        <h5 class="fw-bold">Liens utiles</h5>
+                        <h3 class="fw-bold fs-5" style="color: var(--couleur-texte);">Liens utiles</h3>
                         <ul class="list-unstyled">
-                            <li class="mb-1"><a href="index.html" class="text-muted text-decoration-none">Accueil</a></li>
-                            <li class="mb-1"><a href="freelances.html" class="text-muted text-decoration-none">Trouver un freelance</a></li>
-                            <li class="mb-1"><a href="tarifs.html" class="text-muted text-decoration-none">Nos tarifs</a></li>
-                            <li class="mb-1"><a href="about.html" class="text-muted text-decoration-none">À propos</a></li>
-                            <li class="mb-1"><a href="blog.html" class="text-muted text-decoration-none">Blog</a></li>
+                            <li><a href="index.html" style="color: var(--couleur-muted);">Accueil</a></li>
+                            <li><a href="freelance.html" style="color: var(--couleur-muted);">Freelances</a></li>
+                            <li><a href="tarif.html" style="color: var(--couleur-muted);">Tarifs</a></li>
+                            <li><a href="about.html" style="color: var(--couleur-muted);">À propos</a></li>
+                            <li><a href="contact.html" style="color: var(--couleur-muted);">Contact</a></li>
                         </ul>
                     </div>
-
                     <div class="col-md-6 col-lg-3">
-                        <h5 class="fw-bold">Ressources</h5>
+                        <h3 class="fw-bold fs-5" style="color: var(--couleur-texte);">Ressources</h3>
                         <ul class="list-unstyled">
-                            <li class="mb-1"><a href="#" class="text-muted text-decoration-none">Centre d'aide</a></li>
-                            <li class="mb-1"><a href="#" class="text-muted text-decoration-none">Conditions d'utilisation</a></li>
-                            <li class="mb-1"><a href="#" class="text-muted text-decoration-none">Confidentialité</a></li>
-                            <li class="mb-1"><a href="#" class="text-muted text-decoration-none">Guide du freelance</a></li>
-                            <li class="mb-1"><a href="#" class="text-muted text-decoration-none">Guide entreprise</a></li>
+                            <li><a href="#" style="color: var(--couleur-muted);">Centre d'aide</a></li>
+                            <li><a href="#" style="color: var(--couleur-muted);">Conditions</a></li>
+                            <li><a href="#" style="color: var(--couleur-muted);">Confidentialité</a></li>
                         </ul>
                     </div>
-
                     <div class="col-md-6 col-lg-3">
-                        <h5 class="fw-bold">Contact</h5>
-                        <ul class="list-unstyled text-muted">
-                            <li class="mb-2"><i class="bi bi-envelope me-2" aria-hidden="true"></i>hello@afritalent.africa</li>
-                            <li class="mb-2"><i class="bi bi-telephone me-2" aria-hidden="true"></i>+221 78 575 40 66</li>
-                            <li><i class="bi bi-geo-alt me-2" aria-hidden="true"></i>Dakar, Sénégal</li>
+                        <h3 class="fw-bold fs-5" style="color: var(--couleur-texte);">Contact</h3>
+                        <ul class="list-unstyled" style="color: var(--couleur-muted);">
+                            <li>hello@afritalent.africa</li>
+                            <li>+221 78 575 40 66</li>
+                            <li>Dakar, Sénégal</li>
                         </ul>
                     </div>
-
                 </div>
-
                 <hr class="border-secondary mt-4">
-                <p class="text-center text-muted mb-0">
-                    &copy; <span>2026</span> AfriTalent. Tous droits réservés.
-                </p>
-
+                <p class="text-center" style="color: var(--couleur-muted);">&copy; <span id="annee">2026</span> AfriTalent</p>
             </div>
         </div>
     </footer>
-<!-- Bouton toggle mode sombre -->
-<button class="toggle-theme" aria-label="Passer en mode clair">
-    <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
-</button>
+
+    <button class="toggle-theme" aria-label="Passer en mode clair">
+        <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
+    </button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
 
 </body>
+
 </html>
